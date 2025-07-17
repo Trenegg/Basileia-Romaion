@@ -1,8 +1,4 @@
-﻿# TGE journal entries
-# by: Alexedisi
-# I'll organize this file more once I get a better feel for how to structure it
-
-je_tge_golden_eagle = {
+﻿je_tge_golden_eagle = {
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 	group = je_group_internal_affairs
 	
