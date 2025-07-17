@@ -1,0 +1,200 @@
+﻿namespace = tge_tonalism
+
+## Tonalism Starter Events ##
+tge_tonalism.001 = { # Tonalism Monitor
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		NOT = {
+			has_variable = tge_tonalism_starter_var
+		}
+	}
+
+	immediate = {
+		set_variable = tge_tonalism_starter_var
+		if = {
+			limit = { 
+				country_has_state_religion = rel:br_tge_religion_teotl
+			}
+			trigger_event = {
+				id = tge_tonalism.003
+			}
+		}
+		else = {
+			trigger_event = {
+				id = tge_tonalism.002
+			}
+		}
+	}
+}
+
+tge_tonalism.002 = { # 
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_tlaloc.dds"
+
+	title = tge_tonalism.002.t
+	desc = tge_tonalism.002.d
+	flavor = tge_tonalism.002.f
+
+	event_image = {
+		video = "media_alias"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	dlc = dlc_tge
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = tge_tonalism.002.a
+		default_option = yes
+		custom_tooltip = tge_no_effects
+	}
+
+}
+
+tge_tonalism.003 = { #
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_tlaloc.dds"
+
+	title = tge_tonalism.003.t
+	desc = tge_tonalism.003.d
+	flavor = tge_tonalism.003.f
+
+	event_image = {
+		video = "media_alias"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	dlc = dlc_tge
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = tge_tonalism.003.a
+		default_option = yes
+		custom_tooltip = tge_no_effects
+	}
+
+}
+
+## Deity Veneration Events ##
+tge_tonalism.010 = { # Venerating a Deity
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_tlaloc.dds"
+
+	title = tge_tonalism.010.t
+	desc = tge_tonalism.010.d
+	flavor = tge_tonalism.010.f
+
+	gui_window = event_window_ethics
+
+	event_image = {
+		video = "southamerica_christianity"
+	}
+
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	dlc = dlc_tge
+
+	trigger = {
+		# triggered by tge_select_deity_button
+	}
+
+	immediate = {
+		ig:ig_devout = {
+			save_scope_as = devout_scope
+		}
+	}
+
+	option = {
+		name = tge_tonalism.010.a
+		default_option = yes
+		if = {
+			limit = {
+				tge_has_devotion_trigger = no
+			}
+			custom_tooltip = eocfm_no_effects
+		}
+		else = {
+			tge_remove_devotion_modifiers_effect = yes
+		}
+	}
+
+	option = {
+		name = tge_tonalism.010.1
+		tge_remove_devotion_modifiers_effect = yes
+		add_modifier = modifier_tge_tezcatlipoca
+		custom_tooltip = {
+			text = tge_deity_timeout_GET 
+			set_variable = { 
+				name = tge_deity_cooldown_var
+				years = 10
+			}
+		}
+	}
+
+	option = {
+		name = tge_tonalism.010.2
+		tge_remove_devotion_modifiers_effect = yes
+		add_modifier = modifier_tge_tlaloc
+		custom_tooltip = {
+			text = tge_deity_timeout_GET
+			set_variable = {
+				name = tge_deity_cooldown_var
+				years = 10
+			}
+		}
+	}
+
+	option = {
+		name = tge_tonalism.010.3
+		tge_remove_devotion_modifiers_effect = yes
+		add_modifier = modifier_tge_quetzalcoatl
+		custom_tooltip = {
+			text = tge_deity_timeout_GET
+			set_variable = {
+				name = tge_deity_cooldown_var
+				years = 10
+			}
+		}
+	}
+
+	option = {
+		name = tge_tonalism.010.4
+		tge_remove_devotion_modifiers_effect = yes
+		add_modifier = modifier_tge_huitzilopochtli
+		custom_tooltip = {
+			text = tge_deity_timeout_GET
+			set_variable = {
+				name = tge_deity_cooldown_var
+				years = 10
+			}
+		}
+	}
+	
+	after = { 
+		remove_variable = tge_selecting_deity_var
+	}
+
+}

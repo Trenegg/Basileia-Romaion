@@ -1,0 +1,75 @@
+﻿l_english:
+ # journal entry groups
+ je_group_tge_native_rituals: "Native Rituals"
+
+ # journal entries
+ je_tge_tonalism: "Tonalist Practice"
+ je_tge_tonalism_reason: ""
+
+ # buildings
+
+
+ # pm groups
+
+
+ # production methods
+
+
+ # concepts
+
+
+
+ # custom_loc
+
+
+
+ # decisions
+
+
+ # modifiers
+ modifier_tge_tezcatlipoca: "Venerating $tge_tezcatlipoca$"
+ modifier_tge_tlaloc: "Venerating $tge_tlaloc$"
+ modifier_tge_quetzalcoatl: "Venerating $tge_quetzalcoatl$"
+ modifier_tge_huitzilopochtli: "Venerating $tge_huitzilopochtli$"
+
+ modifier_tge_ritual_bloodletting: "Ritual Bloodletting"
+
+ # notifications
+
+
+ # script value breakdowns
+
+
+ # scripted progressbars
+ tge_tonalism_progressbar: "Tonalli"
+ tge_tonalism_progressbar_desc: "Tonalli"
+
+ # scripted progressbar breakdowns
+
+
+ # scripted buttons
+ tge_select_deity_button: "Venerate Deity"
+ tge_select_deity_button_desc: ""
+ tge_new_fire_button: "Host New Fire Ceremony"
+ tge_new_fire_button_desc: ""
+ tge_revive_bloodletting_button: "Revive Bloodletting"
+ tge_revive_bloodletting_button_desc: ""
+
+ # triggers
+ tge_has_deity_cooldown: "[ROOT.GetCountry.GetNameNoFlag] has begun venerating a deity within the last 10 years."
+ tge_has_deity_cooldown_NOT: "[ROOT.GetCountry.GetNameNoFlag] has #bold not#! begun venerating a deity within the last 10 years."
+
+ tge_is_venerating_deity: "[ROOT.GetCountry.GetNameNoFlag] is venerating a $tge_tonal_deity$"
+ tge_is_venerating_tezcatlipoca: "[ROOT.GetCountry.GetNameNoFlag] is venerating $tge_tezcatlipoca$"
+ tge_is_venerating_tlaloc: "[ROOT.GetCountry.GetNameNoFlag] is venerating $tge_tlaloc$"
+ tge_is_venerating_quetzalcoatl: "[ROOT.GetCountry.GetNameNoFlag] is venerating $tge_quetzalcoatl$"
+ tge_is_venerating_huitzilopochtli: "[ROOT.GetCountry.GetNameNoFlag] is venerating $tge_huitzilopochtli$"
+
+ # tooltips
+ tge_tonal_deity: ""
+ tge_tezcatlipoca: "#yellow Tezcatlipoca#!"
+ tge_tlaloc: "#yellow Tlaloc#!"
+ tge_quetzalcoatl: "#yellow Quetzalcoatl#!"
+ tge_huitzilopochtli: "#yellow Huitzilopochtli#!"
+
+ tge_deity_timeout_GET: "[ROOT.GetCountry.GetNameNoFlag] will be unable to venerate a different deity for #bold 10 years#!."

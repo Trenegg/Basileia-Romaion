@@ -1,0 +1,11 @@
+﻿tge_tonalism_progressbar = {
+	default = yes
+	name = "tge_tonalism_progressbar"
+	desc = "tge_tonalism_progressbar_desc"
+
+	monthly_progress = {}
+
+	max_value = 1000
+	min_value = 0
+	start_value = 25
+}

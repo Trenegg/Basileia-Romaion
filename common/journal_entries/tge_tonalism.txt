@@ -1,0 +1,62 @@
+﻿je_tge_tonalism = {
+	icon = "gfx/interface/icons/event_icons/event_tlaloc.dds"
+	group = je_group_internal_affairs
+
+	should_be_pinned_by_default = yes
+
+	immediate = {
+		set_variable = {
+			name = tge_tonalli_var
+			value = 25
+		}
+		set_variable = {
+			name = tge_tonalli_progress_var
+			value = 0
+		}
+		if = {
+			limit = {
+				country_has_state_religion = rel:br_tge_religion_teotl
+			}
+			set_variable = {
+				name = tge_tonalli_diety_var
+				value = flag:tge_huitzilopochtli
+			}
+		}
+		else = {
+			set_variable = {
+				name = tge_tonalli_diety_var
+				value = 0
+			}
+		}
+	}
+
+	scripted_progress_bar = tge_tonalism_progressbar
+
+	scripted_button = tge_select_deity_button
+	scripted_button = tge_new_fire_button
+	scripted_button = tge_revive_bloodletting_button
+
+	complete = {}
+
+	on_complete = {}
+
+	fail = {
+		NOR = {
+			country_has_state_religion = rel:br_tge_religion_teotl
+			country_has_state_religion = rel:br_tge_religion_mesoamerican
+		}
+	}
+
+	on_fail = {
+		tge_cleanup_tonalism_effect = yes
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			tge_weekly_tonalism_effect = yes
+		}
+	}
+
+	weight = 100
+
+}

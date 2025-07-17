@@ -1,0 +1,42 @@
+﻿br_religion_totemism = {
+	color = { 127 115 115 }
+	texture = "gfx/interface/icons/religion_icons/totemism.dds"
+	traits = {
+		new_world_pagan
+	}
+}
+
+br_religion_inti = {
+	color = { 64 115 115 }
+	texture = "gfx/interface/icons/religion_icons/inti.dds"
+	traits = {
+		new_world_pagan
+	}
+}
+
+## Native American Religions
+# Native religions in this section have been reviewed and correctly assigned -Alexedishi
+
+br_tge_religion_mesoamerican = { # General Mesoamerican Religion
+	color = { 169 108 155 }
+	texture = "gfx/interface/icons/religion_icons/mesoamerican.dds"
+	traits = {
+		mesoamerican_tradition
+	}
+}
+
+br_tge_religion_teotl = { # State Religion of the Aztec Empire
+	color = { 121 126 106 }
+	texture = "gfx/interface/icons/religion_icons/teotl.dds"
+	traits = {
+		mesoamerican_tradition
+	}
+}
+
+br_tge_religion_mayan = { # Specific to Maya Cultures
+	color = { 169 108 155 }
+	texture = "gfx/interface/icons/religion_icons/mayan.dds"
+	traits = {
+		mesoamerican_tradition
+	}
+}
