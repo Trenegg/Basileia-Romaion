@@ -1,4 +1,52 @@
-﻿tge_tonalli_progress_value = {
+﻿tge_golden_eagle_progress_value = {
+	value = 0
+
+	## Sources
+	add = {
+		value = {
+			add = government_legitimacy
+			multiply = 0.01
+			round_to = 0.01
+		}
+		desc = tge_value_from_legitimacy
+	}
+	add = {
+		value = {
+			add = infamy
+			multiply = 0.01
+			round_to = 0.01
+		}
+		desc = tge_value_from_infamy
+	}
+	add = {
+		value = {
+			add = army_power_projection
+			multiply = 0.001
+			round_to = 0.01
+		}
+		desc = tge_value_from_army_projection
+	}
+
+	## Penalties
+	subtract = {
+		value = {
+			add = literacy_rate
+			round_to = 0.01
+		}
+		desc = tge_value_from_literacy
+	}
+	subtract = {
+		value = {
+			add = radical_population_fraction
+			round_to = 0.01
+		}
+		desc = tge_value_from_radicals
+	}
+
+	round_to = 0.01
+}
+
+tge_tonalli_progress_value = {
 	value = 0
 
 	## Sources
@@ -89,4 +137,6 @@
 			desc = tge_value_from_armed_forces_clout_negative
 		}
 	}
+
+	round_to = 0.01
 }

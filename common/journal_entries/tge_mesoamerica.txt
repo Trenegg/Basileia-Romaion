@@ -22,17 +22,62 @@ je_tge_golden_eagle = {
 	modifiers_while_active = {
 		modifier_tge_golden_aspirations
 	}
+
+	scripted_progress_bar = tge_golden_eagle_progressbar
 	
 	complete = {
+		custom_tooltip = {
+			text = je_tge_golden_eagle_complete
+			var:tge_golden_eagle_var >= 500
+		}
 	}
 	
 	on_complete = {
 	}
 	
 	fail = {
+		custom_tooltip = {
+			text = je_tge_golden_eagle_fail
+			var:tge_golden_eagle_var <= 0
+		}
 	}
 	
 	on_fail = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			set_variable = {
+				name = tge_golden_eagle_progress_var
+				value = tge_golden_eagle_progress_value
+			}
+			scope:journal_entry = {
+				set_bar_progress = {
+					name = tge_golden_eagle_progressbar
+					value = var:tge_golden_eagle_var
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			change_variable = {
+				name = tge_golden_eagle_var
+				add = var:tge_golden_eagle_progress_var
+			}
+			clamp_variable = {
+				name = tge_golden_eagle_var
+				max = 500
+				min = 0
+			}
+			scope:journal_entry = {
+				set_bar_progress = {
+					name = tge_golden_eagle_progressbar
+					value = var:tge_golden_eagle_var
+				}
+			}
+		}
 	}
 	
 	weight = 1000
@@ -50,7 +95,11 @@ je_tge_aztlan = {
 	}
 
 	possible = {
+		any_scope_state = {
+			region = sr:region_pacific_coast
+		}
 		has_technology_researched = colonization
+		has_technology_researched = romanticism
 	}
 	
 	immediate = {

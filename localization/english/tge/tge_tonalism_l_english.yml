@@ -57,6 +57,15 @@
  tge_adopt_teotl_button: "Adopt [GetReligion('br_tge_religion_teotl').GetName]"
  tge_adopt_teotl_button_desc: ""
 
+ # Script Value Breakdowns
+ tge_value_from_armed_forces_clout_positive: "From the [concept_clout] of the [GetInterestGroupVariant('ig_armed_forces',GetPlayer).GetName] while [concept_in_government]"
+ tge_value_from_commander_ranks: "From our total number of [concept_commander_rank]#o s#!"
+ tge_value_from_at_war: "From being at [concept_war]"
+ tge_value_from_ritual_bloodletting: "From #bold Practicing Ritual Bloodletting#!"
+ tge_value_from_at_peace: "From being at peace"
+ tge_value_from_no_devotion: "From not venerating any $tge_deity$"
+ tge_value_from_armed_forces_clout_negative: "From the [concept_clout] of the [GetInterestGroupVariant('ig_armed_forces',GetPlayer).GetName] while [concept_in_opposition]"
+
  # triggers
  tge_has_deity_cooldown: "[ROOT.GetCountry.GetNameNoFlag] has begun venerating a deity within the last 10 years."
  tge_has_deity_cooldown_NOT: "[ROOT.GetCountry.GetNameNoFlag] has #bold not#! begun venerating a deity within the last 10 years."
@@ -68,7 +77,7 @@
  tge_is_venerating_huitzilopochtli: "[ROOT.GetCountry.GetNameNoFlag] is venerating $tge_huitzilopochtli$"
 
  # tooltips
- tge_tonal_deity: ""
+ tge_deity: ""
  tge_tezcatlipoca: "#yellow Tezcatlipoca#!"
  tge_tlaloc: "#yellow Tlaloc#!"
  tge_quetzalcoatl: "#yellow Quetzalcoatl#!"

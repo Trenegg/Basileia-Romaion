@@ -1,4 +1,16 @@
-﻿tge_tonalism_progressbar = {
+﻿tge_golden_eagle_progressbar = {
+	default = yes
+	name = "tge_golden_eagle_progressbar"
+	desc = "tge_golden_eagle_progressbar_desc"
+
+	monthly_progress = {  }
+
+	max_value = 500
+	min_value = 0
+	start_value = 100
+}
+
+tge_tonalism_progressbar = {
 	default = yes
 	name = "tge_tonalism_progressbar"
 	desc = "tge_tonalism_progressbar_desc"
