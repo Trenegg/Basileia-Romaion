@@ -41,7 +41,6 @@ je_tge_golden_eagle = {
 
 je_tge_aztlan = {
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
-	
 	group = je_group_foreign_affairs
 	
 	should_be_pinned_by_default = yes
@@ -72,4 +71,34 @@ je_tge_aztlan = {
 	
 	weight = 1000
 	
+}
+
+je_tge_mayan_frontier = {
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	group = je_group_foreign_affairs
+
+	should_be_pinned_by_default = yes
+
+	complete = {
+		owns_entire_state_region = STATE_YUCATAN
+		owns_entire_state_region = STATE_CHIAPAS
+		owns_entire_state_region = STATE_GUATEMALA
+	}
+
+	on_complete = {
+	}
+
+	fail = {
+		NOT = {
+			any_scope_state = {
+				region = sr:region_central_america
+			}
+		}
+	}
+
+	on_fail = {
+	}
+
+	weight = 500
+
 }

@@ -35,6 +35,7 @@
 	scripted_button = tge_select_deity_button
 	scripted_button = tge_new_fire_button
 	scripted_button = tge_revive_bloodletting_button
+	scripted_button = tge_adopt_teotl_button
 
 	complete = {}
 

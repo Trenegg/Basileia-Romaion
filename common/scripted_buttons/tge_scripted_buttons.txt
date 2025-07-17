@@ -60,5 +60,28 @@ tge_revive_bloodletting_button = {
 #		trigger_event = {
 #			id =
 #		}
+		add_modifier = modifier_tge_ritual_bloodletting
+	}
+}
+
+tge_adopt_teotl_button = {
+	name = "tge_adopt_teotl_button"
+	desc = "tge_adopt_teotl_button_desc"
+
+	visible = {
+		NOT = {
+			country_has_state_religion = rel:br_tge_religion_teotl
+		}
+	}
+	possible = {
+		has_law = law_type:law_state_religion
+		tge_is_venerating_huitzilopochtli_trigger = yes
+		infamy >= infamy_threshold:notorious
+	}
+	effect = {
+#		trigger_event = {
+#			id =
+#		}
+		set_state_religion = rel:br_tge_religion_teotl
 	}
 }

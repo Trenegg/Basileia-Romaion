@@ -54,6 +54,8 @@
  tge_new_fire_button_desc: ""
  tge_revive_bloodletting_button: "Revive Bloodletting"
  tge_revive_bloodletting_button_desc: ""
+ tge_adopt_teotl_button: "Adopt [GetReligion('br_tge_religion_teotl').GetName]"
+ tge_adopt_teotl_button_desc: ""
 
  # triggers
  tge_has_deity_cooldown: "[ROOT.GetCountry.GetNameNoFlag] has begun venerating a deity within the last 10 years."

@@ -39,7 +39,7 @@ tge_tonalism.002 = { #
 	flavor = tge_tonalism.002.f
 
 	event_image = {
-		video = "media_alias"
+		video = "tge_mesoamerica_ruler_speaking"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -72,7 +72,7 @@ tge_tonalism.003 = { #
 	flavor = tge_tonalism.003.f
 
 	event_image = {
-		video = "media_alias"
+		video = "tge_mesoamerica_ruler_speaking"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -132,7 +132,7 @@ tge_tonalism.010 = { # Venerating a Deity
 		default_option = yes
 		if = {
 			limit = {
-				tge_has_devotion_trigger = no
+				tge_is_venerating_deity_trigger = no
 			}
 			custom_tooltip = eocfm_no_effects
 		}
