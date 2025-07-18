@@ -121,6 +121,10 @@ tge_tonalism.010 = { # Venerating a Deity
 		# triggered by tge_select_deity_button
 	}
 
+	cancellation_trigger = {
+		country_has_state_religion = rel:br_tge_religion_teotl
+	}
+
 	immediate = {
 		ig:ig_devout = {
 			save_scope_as = devout_scope
@@ -143,58 +147,152 @@ tge_tonalism.010 = { # Venerating a Deity
 
 	option = {
 		name = tge_tonalism.010.1
-		tge_remove_devotion_modifiers_effect = yes
-		add_modifier = modifier_tge_tezcatlipoca
-		custom_tooltip = {
-			text = tge_deity_timeout_GET 
-			set_variable = { 
-				name = tge_deity_cooldown_var
-				years = 10
-			}
-		}
+		tge_devotion_to_tezcatlipoca_effect = yes
+		tge_devotion_timeout_effect = yes
 	}
 
 	option = {
 		name = tge_tonalism.010.2
-		tge_remove_devotion_modifiers_effect = yes
-		add_modifier = modifier_tge_tlaloc
-		custom_tooltip = {
-			text = tge_deity_timeout_GET
-			set_variable = {
-				name = tge_deity_cooldown_var
-				years = 10
-			}
-		}
+		tge_devotion_to_tlaloc_effect = yes
+		tge_devotion_timeout_effect = yes
 	}
 
 	option = {
 		name = tge_tonalism.010.3
-		tge_remove_devotion_modifiers_effect = yes
-		add_modifier = modifier_tge_quetzalcoatl
-		custom_tooltip = {
-			text = tge_deity_timeout_GET
-			set_variable = {
-				name = tge_deity_cooldown_var
-				years = 10
-			}
-		}
+		tge_devotion_to_quetzalcoatl_effect = yes
+		tge_devotion_timeout_effect = yes
 	}
 
 	option = {
 		name = tge_tonalism.010.4
-		tge_remove_devotion_modifiers_effect = yes
-		add_modifier = modifier_tge_huitzilopochtli
-		custom_tooltip = {
-			text = tge_deity_timeout_GET
-			set_variable = {
-				name = tge_deity_cooldown_var
-				years = 10
-			}
-		}
+		tge_devotion_to_huitzilopochtli_effect = yes
+		tge_devotion_timeout_effect = yes
 	}
 	
 	after = { 
 		remove_variable = tge_selecting_deity_var
+	}
+
+}
+
+## New Fire Ceremony Events ##
+tge_tonalism.020 = { # Planning a New Fire Ceremony
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_tlaloc.dds"
+
+	title = tge_tonalism.020.t
+	desc = tge_tonalism.020.d
+	flavor = tge_tonalism.020.f
+
+	event_image = {
+		video = "tge_mesoamerica_ruler_speaking"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	dlc = dlc_tge
+
+	trigger = {
+		# triggered by tge_new_fire_button
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = tge_tonalism.020.a
+		default_option = yes
+	}
+
+	option = {
+		name = tge_tonalism.020.b
+	}
+
+}
+
+## Tonalism Decision Events ##
+tge_tonalism.030 = { # Bloodletting Revived
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	title = tge_tonalism.030.t
+	desc = tge_tonalism.030.d
+	flavor = tge_tonalism.030.f
+
+	event_image = {
+		video = "votp_hostile_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	dlc = dlc_tge
+
+	trigger = {
+		# triggered by tge_revive_bloodletting_button
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = tge_tonalism.030.a
+		default_option = yes
+	}
+
+}
+
+tge_tonalism.031 = { # Teotl Adopted
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = tge_tonalism.031.t
+	desc = tge_tonalism.031.d
+	flavor = tge_tonalism.031.f
+
+	event_image = {
+		video = "tge_mesoamerica_ruler_speaking"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	dlc = dlc_tge
+
+	trigger = {
+		# triggered by tge_adopt_teotl_button
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = tge_tonalism.031.a
+		default_option = yes
+		set_state_religion = rel:br_tge_religion_teotl
+		every_scope_pop = { 
+			limit = { 
+				has_pop_religion = br_tge_religion_tonalism
+			}
+			change_pop_religion = {
+				target = rel:br_tge_religion_teotl
+				value = 0.5
+			}
+		}
+		if = {
+			limit = {
+				tge_is_venerating_huitzilopochtli_trigger = no
+			}
+			tge_devotion_to_huitzilopochtli_effect = yes
+		}
+
 	}
 
 }

@@ -32,8 +32,8 @@
  modifier_tge_quetzalcoatl: "Venerating $tge_quetzalcoatl$"
  modifier_tge_huitzilopochtli: "Venerating $tge_huitzilopochtli$"
 
- modifier_tge_new_fire_hosted: "Hosted New Fire Ceremony"
- modifier_tge_new_fire_neglected: "New Fire Ceremony Neglected"
+ modifier_tge_new_fire_hosted: "Hosted [concept_new_fire]"
+ modifier_tge_new_fire_neglected: "[concept_new_fire] Neglected"
  modifier_tge_ritual_bloodletting: "Ritual Bloodletting"
 
  # notifications
@@ -52,7 +52,7 @@
  # scripted buttons
  tge_select_deity_button: "Venerate Deity"
  tge_select_deity_button_desc: ""
- tge_new_fire_button: "Host New Fire Ceremony"
+ tge_new_fire_button: "Host [concept_new_fire]"
  tge_new_fire_button_desc: ""
  tge_revive_bloodletting_button: "Revive Bloodletting"
  tge_revive_bloodletting_button_desc: ""
@@ -63,10 +63,12 @@
  tge_value_from_armed_forces_clout_positive: "From the [concept_clout] of the [GetInterestGroupVariant('ig_armed_forces',GetPlayer).GetName] while [concept_in_government]"
  tge_value_from_commander_ranks: "From our total number of [concept_commander_rank]#o s#!"
  tge_value_from_at_war: "From being at [concept_war]"
+ tge_value_from_new_fire_hosted: "From hosting the [concept_new_fire]"
  tge_value_from_ritual_bloodletting: "From #bold Practicing Ritual Bloodletting#!"
  tge_value_from_at_peace: "From being at peace"
  tge_value_from_no_devotion: "From not venerating any $tge_deity$"
  tge_value_from_armed_forces_clout_negative: "From the [concept_clout] of the [GetInterestGroupVariant('ig_armed_forces',GetPlayer).GetName] while [concept_in_opposition]"
+ tge_value_from_new_fire_neglected: "From neglecting the [concept_new_fire]"
 
  # triggers
  tge_has_deity_cooldown: "[ROOT.GetCountry.GetNameNoFlag] has begun venerating a deity within the last 10 years."
@@ -80,9 +82,15 @@
 
  # tooltips
  tge_deity: ""
+ tge_no_deity: "#yellow No Deity in Particular#!"
  tge_tezcatlipoca: "#yellow Tezcatlipoca#!"
  tge_tlaloc: "#yellow Tlaloc#!"
  tge_quetzalcoatl: "#yellow Quetzalcoatl#!"
  tge_huitzilopochtli: "#yellow Huitzilopochtli#!"
 
  tge_deity_timeout_GET: "[ROOT.GetCountry.GetNameNoFlag] will be unable to venerate a different deity for #bold 10 years#!."
+ tge_devotion_tezcatlipoca_GET: "[ROOT.GetCountry.GetNameNoFlag] will devote itself to $tge_tezcatlipoca$"
+ tge_devotion_tlaloc_GET: "[ROOT.GetCountry.GetNameNoFlag] will devote itself to $tge_tlaloc$"
+ tge_devotion_quetzalcoatl_GET: "[ROOT.GetCountry.GetNameNoFlag] will devote itself to $tge_quetzalcoatl$"
+ tge_devotion_huitzilopochtli_GET: "[ROOT.GetCountry.GetNameNoFlag] will devote itself to $tge_huitzilopochtli$"
+

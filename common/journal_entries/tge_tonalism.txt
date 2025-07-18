@@ -17,6 +17,7 @@
 			limit = {
 				country_has_state_religion = rel:br_tge_religion_teotl
 			}
+			tge_devotion_to_huitzilopochtli_effect = yes
 			set_variable = {
 				name = tge_tonalli_diety_var
 				value = flag:tge_huitzilopochtli
@@ -25,7 +26,7 @@
 		else = {
 			set_variable = {
 				name = tge_tonalli_diety_var
-				value = 0
+				value = flag:tge_no_deity
 			}
 		}
 	}

@@ -52,7 +52,8 @@ tge_new_fire_button = {
 			months = 12
 		}
 		trigger_event = {
-			id =
+			id =  tge_tonalism.020 # Planning a New Fire Ceremony
+			popup = yes
 		}
 		show_as_tooltip = {
 			add_modifier = {
@@ -62,7 +63,6 @@ tge_new_fire_button = {
 		}
 	}
 }
-
 
 tge_revive_bloodletting_button = {
 	name = "tge_revive_bloodletting_button"
@@ -90,7 +90,7 @@ tge_revive_bloodletting_button = {
 			months = 12
 		}
 		trigger_event = {
-			id =
+			id = tge_tonalism.030 # Bloodletting Revived
 		}
 		show_as_tooltip = {
 			add_modifier = modifier_tge_ritual_bloodletting
@@ -123,7 +123,7 @@ tge_adopt_teotl_button = {
 			months = 12
 		}
 		trigger_event = {
-			id =
+			id = tge_tonalism.031 # Teotl Adopted
 		}
 		show_as_tooltip = {
 			set_state_religion = rel:br_tge_religion_teotl
