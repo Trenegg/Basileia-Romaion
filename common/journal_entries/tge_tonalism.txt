@@ -1,6 +1,6 @@
 ﻿je_tge_tonalism = {
 	icon = "gfx/interface/icons/event_icons/event_tlaloc.dds"
-	group = je_group_internal_affairs
+	group = je_group_tge_native_rituals
 
 	should_be_pinned_by_default = yes
 
