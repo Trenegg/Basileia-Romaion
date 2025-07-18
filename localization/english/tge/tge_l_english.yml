@@ -26,7 +26,8 @@
  pm_altiplano_secular_administration: "Secular Administration"
  
  # concepts
- 
+ concept_tonalli: "Tonalli"
+ concept_tonalli_desc: ""
  
  # countries
  ARI_CAH: "Cahita"
@@ -140,8 +141,11 @@
  law_altepetl_desc: "A system of polities comprised of commoner housing units led by a single dynastic ruler, with these ruler united by tributary relationships to a hegemonic power."
  
  # modifiers
- 
- 
+
+ # Modifier Types
+ country_weekly_tonalli_add: "Weekly [concept_tonalli] Progress"
+ country_weekly_tonalli_add_desc: "A modifier to the amount of weekly [concept_tonalli] accrued by a [concept_country]"
+
  # notifications
  
   

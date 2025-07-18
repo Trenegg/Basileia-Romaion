@@ -3,7 +3,7 @@
  je_group_tge_native_rituals: "Native Rituals"
 
  # journal entries
- je_tge_tonalism: "Tonalist Practice"
+ je_tge_tonalism: "Tonalist Practices"
  je_tge_tonalism_reason: ""
 
  # buildings
@@ -32,6 +32,8 @@
  modifier_tge_quetzalcoatl: "Venerating $tge_quetzalcoatl$"
  modifier_tge_huitzilopochtli: "Venerating $tge_huitzilopochtli$"
 
+ modifier_tge_new_fire_hosted: "Hosted New Fire Ceremony"
+ modifier_tge_new_fire_neglected: "New Fire Ceremony Neglected"
  modifier_tge_ritual_bloodletting: "Ritual Bloodletting"
 
  # notifications

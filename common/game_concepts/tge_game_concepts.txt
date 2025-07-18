@@ -1,0 +1,3 @@
+concept_tonalli = {
+	texture = "gfx/interface/icons/generic_icons/generic_concept_icon.dds"
+}
