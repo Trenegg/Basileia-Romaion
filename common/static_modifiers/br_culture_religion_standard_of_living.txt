@@ -669,14 +669,14 @@ br_religion_inti_standard_of_living_modifier_negative = {
 	state_br_religion_inti_standard_of_living_add = 1
 }
 
-br_tge_religion_mesoamerican_standard_of_living_modifier_positive = {
+br_tge_religion_tonalism_standard_of_living_modifier_positive = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
-	state_br_tge_religion_mesoamerican_standard_of_living_add = 1
+	state_br_tge_religion_tonalism_standard_of_living_add = 1
 }
 
-br_tge_religion_mesoamerican_standard_of_living_modifier_negative = {
+br_tge_religion_tonalism_standard_of_living_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
-	state_br_tge_religion_mesoamerican_standard_of_living_add = 1
+	state_br_tge_religion_tonalism_standard_of_living_add = 1
 }
 
 br_tge_religion_teotl_standard_of_living_modifier_positive = {
@@ -687,16 +687,6 @@ br_tge_religion_teotl_standard_of_living_modifier_positive = {
 br_tge_religion_teotl_standard_of_living_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	state_br_tge_religion_teotl_standard_of_living_add = 1
-}
-
-br_tge_religion_nahuatl_standard_of_living_modifier_positive = {
-	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
-	state_br_tge_religion_nahuatl_standard_of_living_add = 1
-}
-
-br_tge_religion_nahuatl_standard_of_living_modifier_negative = {
-	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
-	state_br_tge_religion_nahuatl_standard_of_living_add = 1
 }
 
 br_tge_religion_mayan_standard_of_living_modifier_positive = {

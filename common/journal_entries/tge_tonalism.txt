@@ -44,7 +44,7 @@
 	fail = {
 		NOR = {
 			country_has_state_religion = rel:br_tge_religion_teotl
-			country_has_state_religion = rel:br_tge_religion_mesoamerican
+			country_has_state_religion = rel:br_tge_religion_tonalism
 		}
 	}
 

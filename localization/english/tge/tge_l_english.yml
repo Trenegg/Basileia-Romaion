@@ -37,9 +37,7 @@
  ARI_PIM_ADJ: "Piman"
  ARI_TAR: "Tarahumara"
  ARI_TAR_ADJ: "Tarahumaran"
- 
- MAY: "Mayab"
- MAY_ADJ: "Mayab"
+
  MAY_CHL: "Ch'ol"
  MAY_CHL_ADJ: "Ch'ol"
  MAY_CHO: "Chontal"
@@ -153,7 +151,7 @@
  
  
  # religions
- br_tge_religion_mesoamerican: "Tonalist"
+ br_tge_religion_tonalism: "Tonalist"
  br_tge_religion_teotl: "Teotl"
  br_tge_religion_mayan: "Maya Ritualism"
  

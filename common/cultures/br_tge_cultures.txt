@@ -539,7 +539,7 @@ oodham= {
 
 pueblo= {
 	color= hsv{ 0.19 0.34 0.93 }
-	religion = br_tge_religion_mesoamerican
+	religion = br_tge_religion_tonalism
 	traits = { north_american_heritage tanoan }
 	male_common_first_names = {
 		Alchesay
@@ -598,7 +598,7 @@ pueblo= {
 
 cahitan = {
 	color = { 77 67 68 }
-	religion = br_tge_religion_mesoamerican
+	religion = br_tge_religion_tonalism
 	traits = { mesoamerican_heritage cahitan }
 	male_common_first_names = {
 		Eiya
@@ -864,7 +864,7 @@ miskito = { # Names stolen from Maya due to lack of sources
 
 mixtec = {
 	color= { 150 80 70 }
-	religion = br_tge_religion_mesoamerican
+	religion = br_tge_religion_tonalism
 	traits = { mesoamerican_heritage otomanguean }
 	male_common_first_names = {
 		Amoxtli
@@ -956,7 +956,7 @@ mixtec = {
 
 nahua= {
 	color= hsv{ 0.47 0.29 0.38 }
-	religion = br_tge_religion_nahuatl
+	religion = br_tge_religion_tonalism
 	traits = { mesoamerican_heritage nahua }
 	male_common_first_names = {
 		Amoxtli
@@ -1040,7 +1040,7 @@ nahua= {
 
 otomi = {
 	color = { 169 58 12 }
-	religion = br_tge_religion_mesoamerican
+	religion = br_tge_religion_tonalism
 	traits = { mesoamerican_heritage otomi }
 	
 	male_common_first_names={
@@ -1081,7 +1081,7 @@ otomi = {
 
 purepecha = {
 	color = { 100 124 50 }
-	religion = br_tge_religion_mesoamerican
+	religion = br_tge_religion_tonalism
 	traits = { mesoamerican_heritage purepecha }
 	
 	male_common_first_names={
@@ -1185,7 +1185,7 @@ taino = { #
 
 tarahumara = {
 	color= { 52 120 25 }
-	religion = br_tge_religion_mesoamerican
+	religion = br_tge_religion_tonalism
 	traits = { mesoamerican_heritage tarahumara }
 	
 	male_common_first_names={
@@ -1380,7 +1380,7 @@ west_mayan = {
 
 zapotec = {
 	color= hsv{ 0.32 0.29 0.78 }
-	religion = br_tge_religion_mesoamerican
+	religion = br_tge_religion_tonalism
 	traits = { mesoamerican_heritage otomanguean }
 	male_common_first_names = {
 		Agustin

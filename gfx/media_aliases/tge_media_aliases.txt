@@ -34,7 +34,7 @@ tge_mesoamerica_jungle_stranger = {
 }
 
 tge_mesoamerica_public_debate = {
-	video = gfx/event_pictures/tge_mesoamerica_public_debate.bk2"
+	video = "gfx/event_pictures/tge_mesoamerica_public_debate.bk2"
 	audio = "event:/SFX/Events/africa/leader_arguing"
 
 	fallback = africa_leader_arguing
