@@ -27,6 +27,18 @@
 				activate_production_methods={ "pm_traditional_art" "pm_bourgeoisie_patronage" }
 			}
 			create_building={
+				building="building_food_industry"
+				add_ownership={
+					company={
+						type=company_florence_bank
+						country="c:TUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_spiced_food" "pm_manual_dough_processing" "pm_disabled_distillery" }
+			}
+			create_building={
 				building="building_tooling_workshops"
 				add_ownership={
 					building={
@@ -49,6 +61,7 @@
 						region="STATE_LOMBARDY"
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_cannons" }
 			}
@@ -123,6 +136,7 @@
 						region="STATE_LOMBARDY"
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_muskets" }
 			}
@@ -137,7 +151,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_no_secondary" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_no_secondary" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -184,7 +198,7 @@
 					building={
 						type="building_financial_district"
 						country="c:LOM"
-						levels=1
+						levels=2
 						region="STATE_LOMBARDY"
 					}
 				}
@@ -327,7 +341,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_no_secondary" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_no_secondary" }
 			}
 			create_building={
 				building="building_cotton_plantation"
@@ -453,7 +467,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_no_secondary" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_no_secondary" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -657,9 +671,10 @@
 					company={
 						type=company_gen_arsenal
 						country="c:br_genoa"
-						levels=1
+						levels=2
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_cannons" }
 			}
@@ -674,7 +689,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -703,41 +718,15 @@
 				activate_production_methods={ "pm_sheep_farms" "pm_increased_horse_ranch" "pm_butchering_tools" "pm_standard_fences" "pm_unrefrigerated" }
 			}
 			create_building={
-				building="building_coal_mine"
-				add_ownership={
-					building={
-						type="building_financial_district"
-						country="c:br_genoa"
-						levels=1
-						region="STATE_PIEDMONT"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
-			}
-			create_building={
-				building="building_logging_camp"
-				add_ownership={
-					building={
-						type="building_financial_district"
-						country="c:br_genoa"
-						levels=1
-						region="STATE_PIEDMONT"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_horse_drawn" "pm_horse_drawn_transport" }
-			}
-			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					building={
-						type="building_financial_district"
+					company={
+						type=company_gen_arsenal
 						country="c:br_genoa"
-						levels=1
-						region="STATE_PIEDMONT"
+						levels=2
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_muskets" }
 			}
@@ -749,6 +738,11 @@
 						country="c:br_genoa"
 						levels=2
 						region="STATE_PIEDMONT"
+					}
+					company={
+						type=company_gen_arsenal
+						country="c:br_genoa"
+						levels=1
 					}
 					company={
 						type=company_gen_trade
@@ -765,9 +759,10 @@
 					company={
 						type=company_gen_arsenal
 						country="c:br_genoa"
-						levels=2
+						levels=3
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_military_shipbuilding_wooden_2" }
 			}
@@ -790,8 +785,18 @@
 					building={
 						type="building_financial_district"
 						country="c:br_genoa"
-						levels=8
+						levels=4
 						region="STATE_PIEDMONT"
+					}
+					company={
+						type=company_gen_arsenal
+						country="c:br_genoa"
+						levels=1
+					}
+					company={
+						type=company_gen_trade
+						country="c:br_genoa"
+						levels=2
 					}
 				}
 				reserves=1
@@ -856,7 +861,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -895,7 +900,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 		region_state:ANL={
@@ -954,7 +959,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -1025,7 +1030,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_br_small_port" }
 			}
 		}
 	}
@@ -1055,7 +1060,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_no_secondary" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_no_secondary" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -1090,6 +1095,18 @@
 				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					company={
+						type=company_florence_bank
+						country="c:TUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+			}
+			create_building={
 				building="building_logging_camp"
 				add_ownership={
 					building={
@@ -1113,7 +1130,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 		region_state:br_spoleto={
@@ -1141,7 +1158,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_wheat_farm"
@@ -1154,7 +1171,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -1212,7 +1229,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 	}
@@ -1273,7 +1290,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 	}
@@ -1303,7 +1320,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -1368,7 +1385,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 		region_state:SIC={
@@ -1381,7 +1398,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
 				building="building_university"
@@ -1446,6 +1463,12 @@
 						levels=1
 						region="STATE_VENETIA"
 					}
+					building={
+						type="building_financial_district"
+						country="c:br_genoa"
+						levels=1
+						region="STATE_PIEDMONT"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_basic_shipbuilding"}
@@ -1486,6 +1509,7 @@
 						region="STATE_EASTERN_THRACE"
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_muskets" }
 			}
@@ -1530,7 +1554,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -1622,7 +1646,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
 				building="building_wheat_farm"
@@ -1635,7 +1659,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -1673,7 +1697,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -1699,7 +1723,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 	}
@@ -1710,11 +1734,11 @@
 				add_ownership={
 					country={
 						country="c:SIC"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
 				building="building_wheat_farm"
@@ -1727,7 +1751,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -1792,7 +1816,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_br_small_port" }
 			}
 		}
 	
@@ -1808,7 +1832,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -1873,7 +1897,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 	
@@ -1910,7 +1934,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -2008,7 +2032,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -2085,7 +2109,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_br_small_port" }
 			}
 		}
 	}
@@ -2102,7 +2126,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -2140,7 +2164,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_lead_mine"
@@ -2240,7 +2264,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_wheat_farm"
@@ -2253,7 +2277,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -2334,7 +2358,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -2366,7 +2390,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 		region_state:MOD={
@@ -2440,7 +2464,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -2454,6 +2478,18 @@
 				}
 				reserves=1
 				activate_production_methods={ "default_building_vineyard_plantation" "pm_horse_drawn_transport" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					company={
+						type=company_florence_bank
+						country="c:TUS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -2505,7 +2541,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 			create_building={
 				building="building_barracks"
@@ -2662,7 +2698,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_no_secondary" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_no_secondary" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -2728,7 +2764,7 @@
 					company={
 						type=company_florence_bank
 						country="c:TUS"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
@@ -2815,7 +2851,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -2897,11 +2933,11 @@
 				add_ownership={
 					country={
 						country="c:PAP"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
 				building="building_university"
@@ -2943,7 +2979,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -3019,7 +3055,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_br_small_port" }
 			}
 		}
 	}
@@ -3041,6 +3077,18 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_food_industry"
+				add_ownership={
+					company={
+						type=company_florence_bank
+						country="c:TUS"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_spiced_food" "pm_manual_dough_processing" "pm_disabled_distillery" }
 			}
 			create_building={
 				building="building_university"
@@ -3090,7 +3138,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -3226,13 +3274,13 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					building={
-						type="building_financial_district"
+					company={
+						type=company_ven_arsenal
 						country="c:VEN"
-						levels=2
-						region="STATE_VENETIA"
+						levels=3
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_muskets" }
 			}
@@ -3242,9 +3290,10 @@
 					company={
 						type=company_ven_arsenal
 						country="c:VEN"
-						levels=1
+						levels=2
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_cannons" }
 			}
@@ -3283,9 +3332,10 @@
 					company={
 						type=company_ven_arsenal
 						country="c:VEN"
-						levels=3
+						levels=4
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_military_shipbuilding_wooden_2" }
 			}
@@ -3347,8 +3397,18 @@
 					building={
 						type="building_financial_district"
 						country="c:VEN"
-						levels=8
+						levels=4
 						region="STATE_VENETIA"
+					}
+					company={
+						type=company_ven_trade
+						country="c:VEN"
+						levels=2
+					}
+					company={
+						type=company_ven_arsenal
+						country="c:VEN"
+						levels=2
 					}
 				}
 				reserves=1
@@ -3472,7 +3532,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -3506,7 +3566,7 @@
 					building={
 						type="building_financial_district"
 						country="c:VEN"
-						levels=1
+						levels=4
 						region="STATE_VENETIA"
 					}
 				}
@@ -3651,7 +3711,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -3680,7 +3740,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
 				building="building_sulfur_mine"
@@ -3711,7 +3771,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -3782,7 +3842,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
 				building="building_sulfur_mine"
@@ -3813,7 +3873,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -3887,7 +3947,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -3939,7 +3999,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_br_small_port" }
 			}
 		}
 	}
@@ -3956,7 +4016,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -4034,7 +4094,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}	
 	}
@@ -4064,7 +4124,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -4103,7 +4163,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 		region_state:br_aquileia={
@@ -4157,7 +4217,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_organic_farming" "pm_tools" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_organic_farming" "pm_tools" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_vineyard_plantation"

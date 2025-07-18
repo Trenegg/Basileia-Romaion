@@ -157,7 +157,7 @@ ai_strategy_default = {
 				}
 			}
 		}
-		
+
 		### Risorgimento
 
 		if = {
@@ -403,7 +403,7 @@ ai_strategy_default = {
 			limit = {
 				c:JAP ?= this
 				NOT = {
-					has_law = law_type:law_isolationism
+					has_law_or_variant = law_type:law_isolationism
 					has_law = law_type:law_closed_borders
 				}
 				scope:country = {
@@ -478,15 +478,14 @@ ai_strategy_default = {
 	# Added to base neutrality in diplomatic plays
 	# Using this value in other strategies will function additively
 	diplomatic_play_neutrality = {
-		value = 50
+		value = 60
 
 		# Ottomans should avoid unnecessary entanglements while trying to pursue the Tanzimat reforms
 		if = {
 			limit = {
 				has_journal_entry = je_palaiologos_reforms_main #BR Edited
 			}
-			
-			add = 25
+			add = 50
 		}
 	}
 
@@ -494,7 +493,7 @@ ai_strategy_default = {
 	# Using this value in other strategies will function additively
 	#BR TODO use this code to make the show down perhaps happen in Italy.
 	diplomatic_play_boldness = {
-		value = 60
+		value = 50
 		
 		if = { # Isolationist Japan should tend to back down against market opening plays
 			limit = {
@@ -516,7 +515,6 @@ ai_strategy_default = {
 			}
 			add = 1000
 		}
-		
 		if = { #Likewise for Mughals.
 			limit = {
 				c:MUG ?= THIS
@@ -835,8 +833,22 @@ ai_strategy_default = {
 					scope:target_state = { owner = root }
 				}
 
-				if = { # Very reluctant to cede incorporate states
-					limit = { scope:target_state = { is_incorporated = yes } }
+				if = {
+					limit = {
+						scope:target_state = { ai_can_incorporate_state = yes }
+					}
+					add = 50
+				}
+
+				if = { # Very reluctant to cede incorporated states
+					limit = {
+						scope:target_state = {
+							OR = {
+								is_incorporated = yes
+								ai_can_incorporate_state = yes
+							}
+						}
+					}
 
 					if = {
 						limit = {
@@ -1061,7 +1073,6 @@ ai_strategy_default = {
 					has_journal_entry = je_consolidate_india_01
 					scope:target_country = {
 						is_country_type = unrecognized
-						#target_is_our_or_fellow_subject = no
 					}
 					scope:target_state = {
 						OR = {
@@ -1135,10 +1146,10 @@ ai_strategy_default = {
 								state_region = s:STATE_ILLINOIS
 								state_region = s:STATE_NORTH_CAROLINA							
 							}
-						}					
+						}
 					}
-					add = 50 
-					
+					add = 50
+
 					if = {
 						limit = { is_adjacent_to_state = scope:target_state }
 						multiply = 2
@@ -1568,7 +1579,7 @@ ai_strategy_default = {
 								owner = ROOT
 							}
 						}
-					}			
+					}
 				}
 			}
 			add = 40
@@ -1678,7 +1689,7 @@ ai_strategy_default = {
 		if = {
 			limit = {
 				# Because the target state in a treaty article is not actually the treaty port state, we need to check the entire state region
-				scope:target_state = { 
+				scope:target_state = {
 					NOT = {
 						state_region = {
 							any_scope_state = {
@@ -1692,12 +1703,12 @@ ai_strategy_default = {
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { has_treaty_port_in_market = scope:target_country.market }
 				multiply = 0.25
 			}
-			
+
 			# Don't want treaty ports on countries in our market
 			if = {
 				limit = {
@@ -1705,7 +1716,7 @@ ai_strategy_default = {
 				}
 				multiply = 0.0
 			}
-			
+
 			# Not worth doing against very small markets
 			if = {
 				limit = {
@@ -1714,7 +1725,7 @@ ai_strategy_default = {
 					}
 				}
 				multiply = 0
-			}		
+			}
 
 			if = {
 				limit = {
@@ -1723,19 +1734,20 @@ ai_strategy_default = {
 							binds = root
 							any_scope_article = {
 								has_type = trade_privilege
+								source_country = scope:target_country
 							}
 						}
 					}
 				}
 				multiply = 0.25
-			}			
+			}
 
 			if = {
 				limit = {
 					can_reach_target_state = no
 				}
 				multiply = 0
-			}			
+			}
 		}
 
 		min = 0
@@ -2013,7 +2025,7 @@ ai_strategy_default = {
 			limit = {
 				has_strategy = ai_strategy_economic_imperialism
 				scope:target_country = {
-					has_law = law_type:law_isolationism
+					has_law_or_variant = law_type:law_isolationism
 					gdp >= 5000000
 				}
 			}
@@ -2344,7 +2356,7 @@ ai_strategy_default = {
 			limit = {
 				c:BYZ ?= this
 				scope:target_country = {
-					any_state = {
+					any_scope_state = {
 						state_region = { is_homeland = cu:greek }
 						has_claim_by = root
 					}
@@ -2519,9 +2531,9 @@ ai_strategy_default = {
 					is_subject_of = scope:target_country
 					scope:target_country = { is_subject_of = root }
 					scope:target_country = { is_player = no } #Will not apply to the player.
-				}				
+				}
 			}
-			add = 10
+			add = 15
 		}
 
 		# Very high aggression against pariah countries by Great Powers
@@ -2558,15 +2570,15 @@ ai_strategy_default = {
 				has_journal_entry = je_palaiologos_reforms_syria
 				game_date < 1740.1.1
 			}
-			add = -75
+			add = -100
 		}
-		
+
 		# Greek Nationalism
 		if = {
 			limit = {
 				c:BYZ ?= this
 				scope:target_country = {
-					any_state = {
+					any_scope_state = {
 						state_region = { is_homeland = cu:greek }
 						has_claim_by = root
 					}
@@ -2590,7 +2602,7 @@ ai_strategy_default = {
 			}
 			add = 25
 		}
-		if = { 
+		if = {
 			limit = {
 				has_journal_entry = je_restore_north_italy
 				scope:target_country = {
@@ -3384,7 +3396,7 @@ ai_strategy_default = {
 
 		if = {
 			limit = { has_strategy = ai_strategy_maintain_mandate_of_heaven }
-			multiply = 0.1
+			multiply = 0.25
 		}
 
 		min = 10
@@ -3493,51 +3505,51 @@ ai_strategy_default = {
 	#BR Added Start
 		if = {
 			limit =  { has_modifier = br_modifier_norse_military_doctrine }
-			multiply = 2.5
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_norse_military_doctrine_2 }
-			multiply = 3
+			multiply = 2
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_anti_colonialism }
-			multiply = 2.5
+			multiply = 2
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_horde_khanate } 
-			multiply = 1.5
+			multiply = 1.25
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_tribal_warriors } 
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_holy_warriors } 
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_jihad_called } 
-			multiply = 5
-		}
-		if = {
-			limit =  { has_technology_researched = br_tech_aggressive_military_bonus } 
-			multiply = 5
-		}
-		if = {
-			limit =  { has_technology_researched = br_tech_defensive_military_bonus } 
 			multiply = 3
 		}
 		if = {
+			limit =  { has_technology_researched = br_tech_aggressive_military_bonus } 
+			multiply = 3.5
+		}
+		if = {
+			limit =  { has_technology_researched = br_tech_defensive_military_bonus } 
+			multiply = 2.5
+		}
+		if = {
 			limit =  { has_modifier = br_modifier_russia_buff_1 } 
-			multiply = 5
+			multiply = 3.5
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_russia_buff_2 } 
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = autocephalous_patriarchate_belgrade } 
-			multiply = 5
+			multiply = 3
 		}
 		if = {
 			limit =  { has_modifier = war_for_independence } 
@@ -3545,31 +3557,31 @@ ai_strategy_default = {
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_gain_independence } 
-			multiply = 5
+			multiply = 3.5
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_african_colony } 
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_spice_trade }
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_exarchate }
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_varangian_primacy }
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_tagmata_primacy }
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_rajputs_modifier }
-			multiply = 3
+			multiply = 2.5
 		}
 		if = {
 			limit =  { has_modifier = br_maratha_modifier }
@@ -3732,15 +3744,15 @@ ai_strategy_default = {
 
 		if = {
 			limit =  { has_modifier = br_modifier_italy_gunboat_trade_diplomacy }
-			multiply = 5
+			multiply = 4
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_spice_trade }
-			multiply = 3
+			multiply = 2.5
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_naval_tradition }
-			multiply = 3
+			multiply = 2.5
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_decentralized_khanate }
@@ -3894,7 +3906,7 @@ ai_strategy_default = {
 		}	
 		else_if = {
 			limit = { has_law = law_type:law_mixed_army }
-			add = 1.25
+			add = 1.5
 		}
 		else_if = {
 			limit = { has_law = law_type:law_tribal_armies }
@@ -3906,36 +3918,36 @@ ai_strategy_default = {
 		}	
 		if = {
 			limit =  { has_modifier = br_modifier_norse_military_doctrine }
-			multiply = 2.5
+			multiply = 2
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_norse_military_doctrine_2 }
-			multiply = 3
+			multiply = 2.5
 		}
 			
 		if = {
 			limit =  { has_modifier = br_modifier_anti_colonialism }
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_horde_khanate } 
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_tribal_warriors } 
-			multiply = 2.5
+			multiply = 2
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_holy_warriors } 
-			multiply = 2.5
+			multiply = 2
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_arab_caliphate } 
-			multiply = 2.5
+			multiply = 2
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_jihad_called } 
-			multiply = 5
+			multiply = 3
 		}
 		if = {
 			limit =  { has_technology_researched = br_tech_defensive_military_bonus } 
@@ -3943,59 +3955,59 @@ ai_strategy_default = {
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_russia_buff_1 } 
-			multiply = 5
+			multiply = 3
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_russia_buff_2 } 
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = autocephalous_patriarchate_belgrade } 
-			multiply = 2.5
+			multiply = 2
 		}
 		if = {
 			limit =  { has_modifier = war_for_independence } 
-			multiply = 5
+			multiply = 4
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_gain_independence } 
-			multiply = 5
+			multiply = 3
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_exarchate }
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_themata_primacy }
-			multiply = 3
+			multiply = 2.5
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_corrupt_pronoia }
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_eastern_roman_emperor }
-			multiply = 2
+			multiply = 1.5
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_holy_roman_emperor }
-			multiply = 2
+			multiply = 1.5
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_elysium }
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_modifier_independent_new_world_colony }
-			multiply = 2
+			multiply = 1.75
 		}
 		if = {
 			limit =  { has_modifier = br_rajputs_modifier }
-			multiply = 3
+			multiply = 2.5
 		}
 		if = {
 			limit =  { has_modifier = br_maratha_modifier }
-			multiply = 2
+			multiply = 1.75
 		}
 	#BR Added End
 
@@ -4411,7 +4423,7 @@ ai_strategy_default = {
 				add = 100
 			}
 		}
-		region_balkans = {		
+		region_balkans = {
 			if = {
 				limit = {
 					country_is_in_europe = yes
@@ -4642,7 +4654,7 @@ ai_strategy_default = {
 			# Large isolationist countries should ignore the world
 			if = {
 				limit = {
-					has_law = law_type:law_isolationism
+					has_law_or_variant = law_type:law_isolationism
 					gdp >= 5000000
 				}
 				add = 10000
@@ -4860,7 +4872,7 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					scope:target_country = {
-						has_law = law_type:law_isolationism
+						has_law_or_variant = law_type:law_isolationism
 						gdp >= 5000000
 					}
 				}
@@ -4907,7 +4919,7 @@ ai_strategy_default = {
 								who = root
 								secret_goal = reconcile
 							}
-						}											
+						}
 					}
 					
 					add = 200				
@@ -5028,8 +5040,8 @@ ai_strategy_default = {
 					scope:target_country.infamy >= infamy_threshold:pariah
 				}
 				multiply = 0.5
-			}	
-			
+			}
+
 			# AI implications for Power Blocs: 'reconcile' secret goal is more likely towards the Bloc members
 			if = {
 				limit = {
@@ -5230,7 +5242,7 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					scope:target_country = {
-						has_law = law_type:law_isolationism
+						has_law_or_variant = law_type:law_isolationism
 						gdp >= 5000000
 					}
 				}
@@ -5488,8 +5500,8 @@ ai_strategy_default = {
 
 				if = {
 					limit = { has_technology_researched = civilizing_mission }
-					add = 200		
-					
+					add = 200
+
 					if = {
 						limit = {
 							scope:target_country = {
@@ -5502,17 +5514,17 @@ ai_strategy_default = {
 							}
 						}
 						add = 250
-					}					
+					}
 					
 					if = {
 						limit = {
 							is_adjacent_to_country = scope:target_country
 							"relations(scope:target_country)" < relations_threshold:amicable							
 						}
-						add = 1000
 					}
+					add = 1000
 				}
-				
+
 				if = {
 					limit = {
 						power_bloc ?= { has_principle_group = principle_group:principle_group_colonial_offices }
@@ -5986,6 +5998,7 @@ ai_strategy_default = {
 							binds = scope:target_country
 							any_scope_article = {
 								has_type = trade_privilege
+								source_country = scope:target_country
 							}
 						}
 					}
@@ -6047,7 +6060,7 @@ ai_strategy_default = {
 
 			# Countries scripted to have a friendly pact, historical overlord status or same power bloc shouldn't start with randomly generated hostile goals
 			if = {
-				limit = { 
+				limit = {
 					game_date < 1736.1.2
 					OR = {
 						is_in_same_power_bloc = scope:target_country
@@ -6074,7 +6087,7 @@ ai_strategy_default = {
 		}
 
 		military_defense = {
-			value = 3
+			value = 4
 		}
 
 		ideology = {
@@ -6205,7 +6218,7 @@ ai_strategy_default = {
 						is_country_type = unrecognized
 						target_is_our_or_fellow_subject = no
 					}
-					scope:target_state = {
+					any_scope_state = {
 						OR = {
 							region = sr:region_bengal
 							region = sr:region_central_india
@@ -6548,17 +6561,16 @@ ai_strategy_default = {
 						max = 100
 					}
 				}
-			}
-
-			if = {
-				limit = {
-					scope:target_country = {
-						num_states > 1
+				if = {
+					limit = {
+						scope:target_country = {
+							num_states > 1
+						}
 					}
-				}
-				add = {
-					value = scope:target_country.num_states
-					multiply = 10
+					add = {
+						value = scope:target_country.num_states
+						multiply = 10
+					}
 				}
 			}
 
@@ -6819,6 +6831,7 @@ ai_strategy_default = {
 				}
 				multiply = 0.0
 			}
+
 			if = {
 				limit = { # Likewise for the Dutch East Indies.
 					exists = c:DEI

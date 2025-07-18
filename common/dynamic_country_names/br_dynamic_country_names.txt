@@ -151,7 +151,7 @@ BYZ = {
 		adjective = dyn_c_re_adj
 		
 		is_main_tag_only = yes
-		priority = 0
+		priority = 3000
 		
 		trigger = {
 			exists = scope:actor
@@ -166,7 +166,7 @@ BYZ = {
 		adjective = dyn_c_re_adj
 		
 		is_main_tag_only = yes
-		priority = 0
+		priority = 3000
 		
 		trigger = {
 			exists = scope:actor
@@ -181,7 +181,7 @@ BYZ = {
 		adjective = dyn_c_re_adj
 		
 		is_main_tag_only = yes
-		priority = 0
+		priority = 3000
 		
 		trigger = {
 			exists = scope:actor
@@ -191,13 +191,13 @@ BYZ = {
 		}
 	}
 
-	dynamic_country_name = { # Rhomania
+	dynamic_country_name = { # Rhomania 
 		name = dyn_c_rhomania_i
 		adjective = dyn_c_re_adj
-
+		
 		is_main_tag_only = yes
-		priority = 0
-
+		priority = 3000
+		
 		trigger = {
 			exists = scope:actor
 			scope:actor = {
@@ -206,13 +206,13 @@ BYZ = {
 		}
 	}
 
-	dynamic_country_name = { # Rhomania
+	dynamic_country_name = { # Rhomania 
 		name = dyn_c_rhomania_ii
 		adjective = dyn_c_re_adj
-
+		
 		is_main_tag_only = yes
-		priority = 0
-
+		priority = 3000
+		
 		trigger = {
 			exists = scope:actor
 			scope:actor = {

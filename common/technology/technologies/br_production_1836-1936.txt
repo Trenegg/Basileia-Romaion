@@ -12,7 +12,9 @@ manufacturies = {
 	}
 
 	unlocking_technologies = {
-		br_tech_textile_manufacturies
+		br_tech_dye_workshops
+		br_tech_paper_manufacturies
+		br_tech_leaded_glass
 		br_tech_experimental_construction
 	}
 
@@ -104,6 +106,7 @@ steelworking = {
 	category = production
 
 	unlocking_technologies = {
+		br_tech_blast_furnaces
 		shaft_mining
 	}
 
@@ -167,7 +170,7 @@ intensive_agriculture = {
 	category = production
 
 	unlocking_technologies = {
-		br_tech_horse_drawn_machinery
+		br_tech_organic_farming
 	}
 
 	ai_weight = {

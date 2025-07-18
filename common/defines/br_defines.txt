@@ -6,6 +6,14 @@ NGame = {
 	END_DATE = "2036.1.1" #300 total years
 }
 
+NCountry = {
+	#INCORPORATION_TIME_SAME_CULTURE = 2				# Years if the state is a Homeland of one of the country's primary cultures
+	INCORPORATION_TIME_SAME_HERITAGE = 8 #5			# Years if the state is a Homeland of a culture that matches of one of the country's primary cultures' Heritage traits
+	INCORPORATION_TIME_SAME_TRAIT = 14 #10			# Years if the state is a Homeland of a culture with any trait in common with a country's primary cultures
+	INCORPORATION_TIME_NO_MATCH = 30 #20			# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
+}
+
+
 #BR: Slower conversion/assimilation faster radical growth discrimination
 NPops = {
 	CONVERSION_RATE = 0.001 #was 0.002						# Percentage of pops who will Convert into a different Religion each month, if eligible
@@ -99,12 +107,6 @@ NDiplomacy = {
 	#ECONOMIC_DEPENDENCE_TRADE_ROUTE_DEPENDENCE_MAX = 0.5 #1
 
 
-}
-
-NAI = {
-	AI_PEACE_DESIRE_FROM_TURMOIL = 50 #25 Add this amount of peace desire at 100% radicals
-	AI_PEACE_DESIRE_FROM_DEBT_LEVEL = 200 #100 Add this amount of peace desire at 100% debt level
-	AI_PEACE_DESIRE_FROM_BANKRUPTCY = 500 #100 Add this amount of peace desire when bankrupt
 }
 
 #BR: Slower wars than vanilla, less attrition and casualties to balance.

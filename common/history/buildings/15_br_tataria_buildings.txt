@@ -175,7 +175,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_tools_disabled" "pm_citrus_orchards" }
+				activate_production_methods={ "pm_br_traditional_farming" "pm_tools_disabled" "pm_citrus_orchards" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -201,7 +201,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_br_traditional_building_tea_plantation" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -255,7 +255,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_br_traditional_building_tea_plantation" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -353,7 +353,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_br_traditional_building_tea_plantation" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -394,7 +394,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_br_traditional_building_tea_plantation" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -435,7 +435,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_br_traditional_building_tea_plantation" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -530,7 +530,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_br_traditional_building_tobacco_plantation" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -723,6 +723,19 @@
 				activate_production_methods={ "pm_simple_farming" "pm_apple_orchards" "pm_tools_disabled" }
 			}
 			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:br_blacksea_colonies"
+						levels=1
+						region="STATE_ROSTOV"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_br_early_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+			}
+			create_building={
 				building="building_logging_camp"
 				add_ownership={
 					building={
@@ -751,6 +764,19 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:br_blacksea_colonies"
+						levels=1
+						region="STATE_ROSTOV"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_br_early_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -895,6 +921,19 @@
 				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:br_tartaria"
+						levels=1
+						region="STATE_TARTARIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_br_early_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+			}
+			create_building={
 				building="building_rye_farm"
 				add_ownership={
 					building={
@@ -965,7 +1004,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
+				activate_production_methods={ "pm_br_traditional_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
 			create_building={
 				building="building_furniture_manufacturies"
@@ -1002,6 +1041,7 @@
 						region="STATE_ROSTOV"
 					}
 				}
+				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_muskets" }
 			}
@@ -1048,12 +1088,18 @@
 					building={
 						type="building_manor_house"
 						country="c:br_tartaria"
-						levels=2
+						levels=1
 						region="STATE_TARTARIA"
+					}
+					building={
+						type="building_financial_district"
+						country="c:br_blacksea_colonies"
+						levels=1
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_br_early_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -1090,7 +1136,7 @@
 				add_ownership={
 					country={
 						country="c:br_tartaria"
-						levels=5
+						levels=8
 					}
 				}
 				reserves=1
@@ -1121,6 +1167,19 @@
 				activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_disabled_ceramics" }
 			}
 			create_building={
+				building="building_food_industry"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:br_blacksea_colonies"
+						levels=1
+						region="STATE_ROSTOV"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_manual_dough_processing" "pm_disabled_distillery" }
+			}
+			create_building={
 				building="building_textile_mills"
 				add_ownership={
 					building={
@@ -1137,7 +1196,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
+				activate_production_methods={ "pm_br_traditional_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -1163,7 +1222,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_fig_orchards_building_rice_farm" }
+				activate_production_methods={ "pm_br_traditional_farming_building_rice_farm" "pm_fig_orchards_building_rice_farm" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -1242,7 +1301,20 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+				activate_production_methods={ "pm_br_early_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:br_tartaria"
+						levels=1
+						region="STATE_TARTARIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_br_early_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -1314,6 +1386,19 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" }
 			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:br_tartaria"
+						levels=1
+						region="STATE_TARTARIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_br_early_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
+			}
 		}
 	}
 	s:STATE_SEMIRECHE={
@@ -1368,7 +1453,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:br_tartaria"
+						country="c:br_taurica"
 						levels=3
 						region="STATE_CRIMEA"
 					}
@@ -1395,12 +1480,17 @@
 					building={
 						type="building_manor_house"
 						country="c:br_taurica"
-						levels=2
+						levels=1
 						region="STATE_CRIMEA"
+					}
+					company={
+						type=company_br_byz_rus
+						country="c:br_taurica"
+						levels=1
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_br_small_port" }
 			}
 		}
 	}
@@ -1423,7 +1513,13 @@
 					building={
 						type="building_manor_house"
 						country="c:br_tartaria"
-						levels=5
+						levels=3
+						region="STATE_CRIMEA"
+					}
+					building={
+						type="building_manor_house"
+						country="c:br_taurica"
+						levels=2
 						region="STATE_CRIMEA"
 					}
 				}
@@ -1467,7 +1563,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_br_small_port" }
 			}
 		}
 		region_state:br_blacksea_colonies={
@@ -1596,12 +1692,36 @@
 					building={
 						type="building_manor_house"
 						country="c:br_tartaria"
-						levels=5
+						levels=3
 						region="STATE_TARTARIA"
+					}
+					building={
+						type="building_manor_house"
+						country="c:br_taurica"
+						levels=2
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:br_taurica"
+						levels=1
+						region="STATE_CRIMEA"
+					}
+					company={
+						type=company_br_byz_rus
+						country="c:br_taurica"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_br_early_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
 			create_building={
 				building="building_wheat_farm"
@@ -1626,7 +1746,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_br_small_port" }
 			}
 		}
 		region_state:VEN={
@@ -1646,7 +1766,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 	}
@@ -1698,6 +1818,11 @@
 						levels=1
 						region="STATE_CRIMEA"
 					}
+					company={
+						type=company_br_byz_rus
+						country="c:br_taurica"
+						levels=1
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_horse_drawn" "pm_horse_drawn_transport" }
@@ -1746,7 +1871,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_br_small_port" }
 			}
 		}
 	}

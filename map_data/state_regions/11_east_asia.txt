@@ -575,7 +575,7 @@ STATE_GUANGDONG = {
     id = 497
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x156AC0" "x19FD82" "x260389" "x2BDE7B" "x2C4C48" "x30B0E0" "x3131E0" "x475968" "x477755" "x489AB0" "x4E581C" "x62BF42" "x7131E0" "x85E0D4" "x8C9358" "x9A21B1" "xA92B88" "xA9B6D4" "xB031E0" "xB0B061" "xC77200" "xCB457A" "xDC137A" "xF0B061" "xF98B04" "xFEBFD5" }
-    traits = { "state_trait_pearl_river" }
+    traits = { "state_trait_pearl_river" state_trait_natural_harbors }
     city = "x2BDE7B"
     port = "xB031E0"
     farm = "xFEBFD5"
@@ -942,7 +942,7 @@ STATE_SUZHOU = {
     id = 512
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x301000" "x61F061" "x6E575B" "x86FF7E" "xB01101" "xD0D0C0" "xE9E92E" }
-    traits = { "state_trait_yangtze_river" }
+    traits = { "state_trait_yangtze_river" state_trait_natural_harbors }
     city = "xB01101"
     port = "x301000"
     farm = "x86FF7E"
@@ -1042,7 +1042,7 @@ STATE_BANGKOK = {
     id = 516
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x060F5C" "x09DC04" "x10AFE0" "x154B0D" "x194621" "x20DFD0" "x2C4B2F" "x30EF20" "x541AFB" "x552E9A" "x5B0F13" "x98384C" "x99A1C0" "xA0084E" "xAA42AD" "xAD234F" "xADC4DA" "xCE49D1" "xDF3CAD" "xEEFF94" "xF36077" }
-    traits = { "state_trait_chao_phraya_delta" }
+    traits = { "state_trait_chao_phraya_delta" "state_trait_indochinese_forest" }
     city = "x10AFE0"
     port = "x10AFE0"
     farm = "x5B0F13"
@@ -1187,6 +1187,7 @@ STATE_CHIANG_MAI = {
     id = 521
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x01087A" "x09C664" "x118CA3" "x2C97B1" "x32744C" "x32B1BD" "x3AAF2B" "x47E1BB" "x4AEF8A" "x507060" "x77FDDB" "x7BB73F" "x88EF9B" "x94A916" "xA93401" "xAB195B" "xABF7A2" "xB17111" "xBD159F" "xD6A9D8" "xED5FC5" "xEE6A10" "xF32BB5" "xFBF0A4" }
+    traits = { "state_trait_indochinese_forest" }
     city = "xAB195B"
     farm = "xD6A9D8"
     mine = "xABF7A2"
@@ -1252,13 +1253,13 @@ STATE_SAKHALIN = {
     }
     resource = {
         type = "bg_iron_mining"
-        undiscovered_amount = 35
-        discovered_amount = 10
+        undiscovered_amount = 39
+        discovered_amount = 6
     }
     resource = {
         type = "bg_coal_mining"
-        undiscovered_amount = 27
-        discovered_amount = 8
+        undiscovered_amount = 29
+        discovered_amount = 6
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1287,8 +1288,8 @@ STATE_HOKKAIDO = {
     }
     resource = {
         type = "bg_iron_mining"
-        undiscovered_amount = 20
-        discovered_amount = 16
+        undiscovered_amount = 24
+        discovered_amount = 12
     }
     resource = {
         type = "bg_coal_mining"
@@ -1336,13 +1337,13 @@ STATE_TOHOKU = {
     }
     resource = {
         type = "bg_lead_mining"
-        undiscovered_amount = 35
-        discovered_amount = 10
+        undiscovered_amount = 37
+        discovered_amount = 8
     }
     resource = {
         type = "bg_iron_mining"
-        undiscovered_amount = 40
-        discovered_amount = 20
+        undiscovered_amount = 48
+        discovered_amount = 12
     }
     resource = {
         type = "bg_sulfur_mining"
@@ -1370,13 +1371,13 @@ STATE_KANTO = {
     }
     resource = {
         type = "bg_iron_mining"
-        undiscovered_amount = 20
-        discovered_amount = 16
+        undiscovered_amount = 24
+        discovered_amount = 12
     }
     resource = {
         type = "bg_lead_mining"
-        undiscovered_amount = 20
-        discovered_amount = 10
+        undiscovered_amount = 24
+        discovered_amount = 6
     }
     naval_exit_id = 3059
 }
@@ -1451,7 +1452,7 @@ STATE_KYUSHU = {
     impassable = { "xEF50C0" "x800111" }
     traits = { "state_trait_chikuho_coalfield" "state_trait_nagasaki_bay" }
     city = "x70CF00"
-    port = "xAE5874"
+    port = "xF0D000"
     farm = "xCEA020"
     mine = "x705080"
     wood = "x73414A"
@@ -1464,18 +1465,18 @@ STATE_KYUSHU = {
     }
     resource = {
         type = "bg_lead_mining"
-        undiscovered_amount = 26
-        discovered_amount = 10
+        undiscovered_amount = 28
+        discovered_amount = 8
     }
     resource = {
         type = "bg_coal_mining"
-        undiscovered_amount = 50
-        discovered_amount = 20
+        undiscovered_amount = 65
+        discovered_amount = 8
     }
     resource = {
         type = "bg_sulfur_mining"
-        undiscovered_amount = 26
-        discovered_amount = 12
+        undiscovered_amount = 30
+        discovered_amount = 8
     }
     naval_exit_id = 3058
 }
@@ -1513,13 +1514,13 @@ STATE_CHUGOKU = {
     }
     resource = {
         type = "bg_lead_mining"
-        undiscovered_amount = 12
-        discovered_amount = 12
+        undiscovered_amount = 16
+        discovered_amount = 8
     }
     resource = {
         type = "bg_sulfur_mining"
-        undiscovered_amount = 26
-        discovered_amount = 12
+        undiscovered_amount = 30
+        discovered_amount = 8
     }
     naval_exit_id = 3059
 }
@@ -1618,7 +1619,7 @@ STATE_YANGHO = {
     provinces = { "x34B782" "x8ACAAA" "xA48A8B" "xAE0221" "xB0D000" "xB0D080" "xBC0C5A" "xC81C12" "xD42CA8" "xF09080" "xF91D98" }
     traits = { "state_trait_honam_plain" }
     city = "xF91D98"
-    port = "x8ACAAA"
+    port = "xB0D080"
     farm = "x8ACAAA"
     mine = "xB0D000"
     wood = "x34B782"
