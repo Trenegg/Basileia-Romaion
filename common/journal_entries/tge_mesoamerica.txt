@@ -1,5 +1,5 @@
 ﻿je_tge_golden_eagle = {
-	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 	group = je_group_internal_affairs
 	
 	should_be_pinned_by_default = yes
@@ -90,7 +90,7 @@
 }
 
 je_tge_aztlan = {
-	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
 	group = je_group_foreign_affairs
 	
 	should_be_pinned_by_default = yes
@@ -101,17 +101,22 @@ je_tge_aztlan = {
 
 	possible = {
 		any_scope_state = {
-			region = sr:region_pacific_coast
+			OR = {
+				region = sr:region_pacific_coast
+				region = sr:region_great_plains
+			}
 		}
 		has_technology_researched = colonization
 		has_technology_researched = romanticism
 	}
 	
 	immediate = {
+
 	}
 	
 	complete = {
-		owns_entire_state_region = STATE_UTAH
+		owns_entire_state_region = STATE_NEW_MEXICO
+		owns_entire_state_region = STATE_ARIZONA
 	}
 	
 	on_complete = {
@@ -128,7 +133,7 @@ je_tge_aztlan = {
 }
 
 je_tge_mayan_frontier = {
-	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
 	group = je_group_foreign_affairs
 
 	should_be_pinned_by_default = yes
