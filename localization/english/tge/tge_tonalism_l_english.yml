@@ -43,8 +43,8 @@
 
 
  # scripted progressbars
- tge_tonalism_progressbar: "Tonalli"
- tge_tonalism_progressbar_desc: "Tonalli"
+ tge_tonalism_progressbar: "Current @tge_tonalli! [concept_tonalli]: [GetPlayer.MakeScope.Var('tge_tonalli_var').GetValue]"
+ tge_tonalism_progressbar_desc: "Current @tge_tonalli! [concept_tonalli]: [GetPlayer.MakeScope.Var('tge_tonalli_var').GetValue]"
 
  # scripted progressbar breakdowns
 

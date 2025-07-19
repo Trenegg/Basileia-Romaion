@@ -26,15 +26,24 @@
 			text = je_tge_golden_eagle_complete
 			var:tge_golden_eagle_var >= 500
 		}
+		has_law = law_type:law_monarchy
+		has_law = law_type:law_autocracy
+		has_law = law_type:law_state_religion
+		country_rank >= rank_value:major_power
 	}
 	
 	on_complete = {
 	}
 	
 	fail = {
-		custom_tooltip = {
-			text = je_tge_golden_eagle_fail
-			var:tge_golden_eagle_var <= 0
+		OR = {
+			custom_tooltip = {
+				text = je_tge_golden_eagle_fail
+				var:tge_golden_eagle_var <= 0
+			}
+			NOT = {
+				country_has_state_religion = rel:br_tge_religion_teotl
+			}
 		}
 	}
 	
