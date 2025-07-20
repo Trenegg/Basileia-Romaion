@@ -16,7 +16,7 @@
 			}
 		}
 		add_journal_entry = {
-			type = je_tge_golden_eagle
+			type = je_tge_tonalism
 		}
 	}
 }
