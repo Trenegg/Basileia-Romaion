@@ -57,7 +57,17 @@ tge_tonalism.002 = { #
 	option = {
 		name = tge_tonalism.002.a
 		default_option = yes
-		custom_tooltip = tge_no_effects
+		if = {
+			limit = {
+				has_journal_entry = je_tge_tonalism
+			}
+			custom_tooltip = tge_no_effects
+		}
+		else = {
+			add_journal_entry = {
+				type = je_tge_golden_eagle
+			}
+		}
 	}
 
 }
@@ -90,7 +100,17 @@ tge_tonalism.003 = { #
 	option = {
 		name = tge_tonalism.003.a
 		default_option = yes
-		custom_tooltip = tge_no_effects
+		if = {
+			limit = {
+				has_journal_entry = je_tge_tonalism
+			}
+			custom_tooltip = tge_no_effects
+		}
+		else = {
+			add_journal_entry = {
+				type = je_tge_golden_eagle
+			}
+		}
 	}
 
 }
