@@ -1,7 +1,42 @@
-﻿namespace = tge_tonalism
+﻿########################################################
+# BASILEIA ROMAION: THE GOLDEN EAGLE - TONALISM EVENTS #
+########################################################
+
+# By: Alexedishi
+
+####################
+
+namespace = tge_tonalism
+
+####################
+
+##  TOC  TABLE OF CONTENTS  ##
+
+#001-009 - Tonalism Starter Events
+#	001 - Tonalism Monitor Event
+#	002 - The Followers of Ometeotl
+#	003 - The Sons of Huitzilopochtli
+
+#010-019 - Deity Veneration Events
+#	010 - Venerating a Deity
+
+#020-029 - New Fire Ceremony Narrative Events
+#	020 - Planning a New Fire Ceremony
+#	021 - ##Gold Sacrifice
+#	022 - ##Animal Sacrifice
+#	023 - ##Human Sacrifice
+#	029 - ##The New Fire Ceremony
+
+#030-039 - New Fire Ceremony Dynamic Events
+#	030 -
+
+#040-049 - Tonalism Decision Events
+#	040 - Bloodletting Revived
+#	041 - Teotl Adopted
+
 
 ## Tonalism Starter Events ##
-tge_tonalism.001 = { # Tonalism Monitor
+tge_tonalism.001 = { # Tonalism Monitor Event
 	type = country_event
 	hidden = yes
 
@@ -72,7 +107,7 @@ tge_tonalism.002 = { #
 
 }
 
-tge_tonalism.003 = { #
+tge_tonalism.003 = { # The Sons of Huitzilopochtli
 	type = country_event
 	placement = root
 	icon = "gfx/interface/icons/event_icons/event_tlaloc.dds"
@@ -225,23 +260,33 @@ tge_tonalism.020 = { # Planning a New Fire Ceremony
 	option = {
 		name = tge_tonalism.020.a
 		default_option = yes
+		add_journal_entry = {
+			type = je_tge_tonalism_new_fire
+		}
+		show_as_tooltip = {
+			add_modifier = modifier_tge_hosting_new_fire
+		}
 	}
 
 	option = {
 		name = tge_tonalism.020.b
+		custom_tooltip = {
+			text = tge_nothing_happens
+			remove_variable = tge_new_fire_var
+		}
 	}
 
 }
 
 ## Tonalism Decision Events ##
-tge_tonalism.030 = { # Bloodletting Revived
+tge_tonalism.040 = { # Bloodletting Revived
 	type = country_event
 	placement = root
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	title = tge_tonalism.030.t
-	desc = tge_tonalism.030.d
-	flavor = tge_tonalism.030.f
+	title = tge_tonalism.040.t
+	desc = tge_tonalism.040.d
+	flavor = tge_tonalism.040.f
 
 	event_image = {
 		video = "votp_hostile_court"
@@ -261,20 +306,20 @@ tge_tonalism.030 = { # Bloodletting Revived
 	}
 
 	option = {
-		name = tge_tonalism.030.a
+		name = tge_tonalism.040.a
 		default_option = yes
 	}
 
 }
 
-tge_tonalism.031 = { # Teotl Adopted
+tge_tonalism.041 = { # Teotl Adopted
 	type = country_event
 	placement = root
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	title = tge_tonalism.031.t
-	desc = tge_tonalism.031.d
-	flavor = tge_tonalism.031.f
+	title = tge_tonalism.041.t
+	desc = tge_tonalism.041.d
+	flavor = tge_tonalism.041.f
 
 	event_image = {
 		video = "tge_mesoamerica_ruler_speaking"
@@ -294,7 +339,7 @@ tge_tonalism.031 = { # Teotl Adopted
 	}
 
 	option = {
-		name = tge_tonalism.031.a
+		name = tge_tonalism.041.a
 		default_option = yes
 		set_state_religion = rel:br_tge_religion_teotl
 		every_scope_pop = { 
