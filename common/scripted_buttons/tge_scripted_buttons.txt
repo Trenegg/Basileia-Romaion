@@ -41,25 +41,20 @@ tge_new_fire_button = {
 	possible = {
 		NOR = {
 			has_modifier = modifier_tge_new_fire_hosted
+			has_journal_entry = je_tge_tonalism_new_fire
 			hidden_trigger = {
 				has_variable = tge_new_fire_var
 			}
 		}
 	}
 	effect = {
-		set_variable = {
-			name = tge_new_fire_var
-			months = 12
-		}
 		trigger_event = {
 			id =  tge_tonalism.020 # Planning a New Fire Ceremony
 			popup = yes
 		}
-		show_as_tooltip = {
-			add_modifier = {
-				name = modifier_tge_new_fire_hosted
-				days = 18980
-			}
+		set_variable = {
+			name = tge_new_fire_var
+			value = 0
 		}
 	}
 }
@@ -90,7 +85,7 @@ tge_revive_bloodletting_button = {
 			months = 12
 		}
 		trigger_event = {
-			id = tge_tonalism.030 # Bloodletting Revived
+			id = tge_tonalism.040 # Bloodletting Revived
 		}
 		show_as_tooltip = {
 			add_modifier = modifier_tge_ritual_bloodletting
@@ -123,10 +118,71 @@ tge_adopt_teotl_button = {
 			months = 12
 		}
 		trigger_event = {
-			id = tge_tonalism.031 # Teotl Adopted
+			id = tge_tonalism.041 # Teotl Adopted
 		}
 		show_as_tooltip = {
 			set_state_religion = rel:br_tge_religion_teotl
 		}
 	}
+}
+
+tge_host_gold_sacrifice_button = {
+	name = "tge_host_gold_sacrifice_button"
+	desc = "tge_host_gold_sacrifice_button_desc"
+
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_scope_building = {
+			is_building_type = building_gold_mine
+		}
+		NOT = {
+			any_scope_state = {
+				has_modifier = modifier_tge_gold_sacrifice
+			}
+		}
+	}
+	effect = {}
+}
+
+tge_host_animal_sacrifice_button = {
+	name = "tge_host_animal_sacrifice_button"
+	desc = "tge_host_animal_sacrifice_button_desc"
+
+	visible = {
+		always = yes
+	}
+	possible = {
+		any_scope_building = {
+			is_building_type = building_livestock_ranch
+		}
+		NOT = {
+			any_scope_state = {
+				has_modifier = modifier_tge_animal_sacrifice
+			}
+		}
+	}
+	effect = {}
+}
+
+tge_host_human_sacrifice_button = {
+	name = "tge_host_human_sacrifice_button"
+	desc = "tge_host_human_sacrifice_button_desc"
+
+	visible = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
+	}
+	possible = {
+		tge_is_venerating_huitzilopochtli_trigger = yes
+		has_modifier = modifier_tge_ritual_bloodletting
+		NOT = {
+			any_scope_state = {
+				has_modifier = modifier_tge_human_sacrifice
+			}
+		}
+	}
+	effect = {}
 }
