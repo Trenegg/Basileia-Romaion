@@ -21,3 +21,20 @@ tge_tonalism_progressbar = {
 	min_value = 0
 	start_value = 25
 }
+
+tge_new_fire_progress_bar = {
+	default_bad = yes
+	name = "tge_new_fire_progress_bar"
+	desc = "tge_new_fire_progress_bar_desc"
+
+	monthly_progress = {
+		add = {
+			value = 1
+			desc = tge_value_from_base_progress
+		}
+	}
+
+	max_value = 36
+	min_value = 0
+	start_value = 0
+}
