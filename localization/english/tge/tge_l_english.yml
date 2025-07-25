@@ -162,7 +162,8 @@
  br_tge_religion_mayan: "Maya Ritualism"
  
  # script value breakdowns
- 
+ tge_value_from_base: "Base Value"
+ tge_value_from_base_progress: "From base monthly progress"
  
  # scripted progressbars
  
