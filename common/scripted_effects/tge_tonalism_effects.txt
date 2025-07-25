@@ -18,6 +18,11 @@
 			value = var:tge_tonalli_var
 		}
 	}
+	remove_modifier = modifier_tge_tonalli
+	add_modifier = {
+		name = modifier_tge_tonalli
+		multiplier = tge_tonalli_multiplier_value
+	}
 }
 
 tge_update_devotion_effect = {
@@ -153,7 +158,11 @@ tge_cleanup_tonalism_effect = {
 		remove_variable = tge_tonalli_diety_var
 		remove_variable = tge_selecting_deity_var
 		remove_variable = tge_deity_cooldown_var
-		tge_remove_devotion_modifiers_effect = yes
+
+		remove_modifier = modifier_tge_tezcatlipoca
+		remove_modifier = modifier_tge_tlaloc
+		remove_modifier = modifier_tge_quetzalcoatl
+		remove_modifier = modifier_tge_huitzilopochtli
 		remove_modifier = modifier_tge_ritual_bloodletting
 		remove_modifier = modifier_tge_new_fire_hosted
 		remove_modifier = modifier_tge_new_fire_neglected
