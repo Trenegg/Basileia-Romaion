@@ -41,6 +41,11 @@ modifier_tge_hosting_new_fire = {
 	state_conversion_mult = 2
 }
 
+modifier_tge_capital_sacrifice = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds"
+	state_infrastructure_mult = -0.10
+}
+
 modifier_tge_gold_sacrifice = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
 	building_gold_fields_throughput_add = -0.50

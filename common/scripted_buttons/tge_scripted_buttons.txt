@@ -142,8 +142,22 @@ tge_host_gold_sacrifice_button = {
 				has_modifier = modifier_tge_gold_sacrifice
 			}
 		}
+		hidden_trigger = {
+			NOT = {
+				has_variable = tge_considering_sacrifice_var
+			}
+		}
 	}
-	effect = {}
+	effect = {
+		trigger_event = {
+			id = tge_tonalism.021
+			popup = yes
+		}
+		set_variable = {
+			name = tge_considering_sacrifice_var
+			months = 1
+		}
+	}
 }
 
 tge_host_animal_sacrifice_button = {
@@ -162,8 +176,22 @@ tge_host_animal_sacrifice_button = {
 				has_modifier = modifier_tge_animal_sacrifice
 			}
 		}
+		hidden_trigger = {
+			NOT = {
+				has_variable = tge_considering_sacrifice_var
+			}
+		}
 	}
-	effect = {}
+	effect = {
+		trigger_event = {
+			id = tge_tonalism.022
+			popup = yes
+		}
+		set_variable = {
+			name = tge_considering_sacrifice_var
+			months = 1
+		}
+	}
 }
 
 tge_host_human_sacrifice_button = {
@@ -183,6 +211,20 @@ tge_host_human_sacrifice_button = {
 				has_modifier = modifier_tge_human_sacrifice
 			}
 		}
+		hidden_trigger = {
+			NOT = {
+				has_variable = tge_considering_sacrifice_var
+			}
+		}
 	}
-	effect = {}
+	effect = {
+		trigger_event = {
+			id = tge_tonalism.023
+			popup = yes
+		}
+		set_variable = {
+			name = tge_considering_sacrifice_var
+			months = 1
+		}
+	}
 }

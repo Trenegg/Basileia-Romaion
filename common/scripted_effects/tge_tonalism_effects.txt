@@ -168,3 +168,63 @@ tge_cleanup_tonalism_effect = {
 		remove_modifier = modifier_tge_new_fire_neglected
 	}
 }
+
+tge_add_small_grandeur_effect = {
+	custom_tooltip = {
+		text = tge_add_small_grandeur
+		change_variable = { 
+			name = tge_new_fire_var
+			add = 1
+		}
+	}
+}
+
+tge_add_medium_grandeur_effect = {
+	custom_tooltip = {
+		text = tge_add_medium_grandeur
+		change_variable = {
+			name = tge_new_fire_var
+			add = 2
+		}
+	}
+}
+
+tge_add_large_grandeur_effect = {
+	custom_tooltip = {
+		text = tge_add_large_grandeur
+		change_variable = {
+			name = tge_new_fire_var
+			add = 3
+		}
+	}
+}
+
+tge_remove_small_grandeur_effect = {
+	custom_tooltip = {
+		text = tge_remove_small_grandeur
+		change_variable = {
+			name = tge_new_fire_var
+			subtract = 1
+		}
+	}
+}
+
+tge_remove_medium_grandeur_effect = {
+	custom_tooltip = {
+		text = tge_remove_medium_grandeur
+		change_variable = {
+			name = tge_new_fire_var
+			subtract = 2
+		}
+	}
+}
+
+tge_remove_large_grandeur_effect = {
+	custom_tooltip = {
+		text = tge_remove_large_grandeur
+		change_variable = {
+			name = tge_new_fire_var
+			subtract = 3
+		}
+	}
+}

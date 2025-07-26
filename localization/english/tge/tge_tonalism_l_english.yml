@@ -118,3 +118,9 @@
  tge_devotion_quetzalcoatl_GET: "[ROOT.GetCountry.GetNameNoFlag] will devote itself to $tge_quetzalcoatl$"
  tge_devotion_huitzilopochtli_GET: "[ROOT.GetCountry.GetNameNoFlag] will devote itself to $tge_huitzilopochtli$"
 
+ tge_add_small_grandeur: "The [concept_new_fire] will be #bold #green Slightly More Grandiose#!#!"
+ tge_add_medium_grandeur: "The [concept_new_fire] will be #bold #green More Grandiose#!#!"
+ tge_add_large_grandeur: "The [concept_new_fire] will be #bold #green Considerably More Grandiose#!#!"
+ tge_remove_small_grandeur: "The [concept_new_fire] will be #bold #red Slightly Less Grandiose#!#!"
+ tge_remove_medium_grandeur: "The [concept_new_fire] will be #bold #red Less Grandiose#!#!"
+ tge_remove_large_grandeur: "The [concept_new_fire] will be #bold #red Considerably Less Grandiose#!#!"

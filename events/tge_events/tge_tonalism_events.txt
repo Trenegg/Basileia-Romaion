@@ -278,6 +278,323 @@ tge_tonalism.020 = { # Planning a New Fire Ceremony
 
 }
 
+tge_tonalism.021 = { # Gold Offered as a Sacrifice
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = tge_tonalism.021.t
+	desc = tge_tonalism.021.d
+	flavor = tge_tonalism.021.f
+
+	event_image = {
+		video = "media_alias"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 1
+
+	dlc = dlc_tge
+
+	trigger = {
+		# triggered by tge_host_gold_sacrifice_button
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_journal_entry = je_tge_tonalism_new_fire
+		}
+	}
+
+	immediate = {
+		capital = {
+			save_scope_as = tge_sacrifice_scope_1
+		}
+		random_scope_state = {
+			limit = {
+				NOT = {
+					scope:tge_sacrifice_scope_1 = this
+				}
+				any_scope_building = {
+					is_building_type = building_gold_mine
+				}
+			}
+			save_scope_as = tge_sacrifice_scope_2
+		}
+		random_scope_state = {
+			limit = {
+				NOR = {
+					scope:tge_sacrifice_scope_1 = this
+					scope:tge_sacrifice_scope_2 = this
+				}
+				any_scope_building = {
+					is_building_type = building_gold_mine
+				}
+			}
+			save_scope_as = tge_sacrifice_scope_3
+		}
+	}
+
+	option = {
+		name = tge_tonalism.021.a
+		default_option = yes
+		trigger = {
+			scope:tge_sacrifice_scope_1 = {
+				NOT = {
+					has_modifier = modifier_tge_capital_sacrifice
+				}
+			}
+		}
+		scope:tge_sacrifice_scope_1 = {
+			add_modifier = {
+				name = modifier_tge_capital_sacrifice
+				months = 24
+			}
+		}
+	}
+
+	option = {
+		name = tge_tonalism.021.b
+		trigger = {
+			exists = scope:tge_sacrifice_scope_2
+		}
+		scope:tge_sacrifice_scope_2 = {
+			add_modifier = {
+				name = modifier_tge_gold_sacrifice
+				months = 24
+			}
+		}
+	}
+
+	option = {
+		name = tge_tonalism.021.c
+		trigger = {
+			exists = scope:tge_sacrifice_scope_3
+		}
+		scope:tge_sacrifice_scope_3 = {
+			add_modifier = {
+				name = modifier_tge_gold_sacrifice
+				months = 24
+			}
+		}
+	}
+
+	after = {
+		remove_variable = tge_considering_sacrifice_var
+	}
+
+}
+
+tge_tonalism.022 = { # Gold Offered as a Sacrifice
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = tge_tonalism.022.t
+	desc = tge_tonalism.022.d
+	flavor = tge_tonalism.022.f
+
+	event_image = {
+		video = "media_alias"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 1
+
+	dlc = dlc_tge
+
+	trigger = {
+		# triggered by tge_host_gold_sacrifice_button
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_journal_entry = je_tge_tonalism_new_fire
+		}
+	}
+
+	immediate = {
+		capital = {
+			save_scope_as = tge_sacrifice_scope_1
+		}
+		random_scope_state = {
+			limit = {
+				NOT = {
+					scope:tge_sacrifice_scope_1 = this
+				}
+				any_scope_building = {
+					is_building_type = building_gold_mine
+				}
+			}
+			save_scope_as = tge_sacrifice_scope_2
+		}
+		random_scope_state = {
+			limit = {
+				NOR = {
+					scope:tge_sacrifice_scope_1 = this
+					scope:tge_sacrifice_scope_2 = this
+				}
+				any_scope_building = {
+					is_building_type = building_gold_mine
+				}
+			}
+			save_scope_as = tge_sacrifice_scope_3
+		}
+	}
+
+	option = {
+		name = tge_tonalism.022.a
+		default_option = yes
+		trigger = {
+			scope:tge_sacrifice_scope_1 = {
+				NOT = {
+					has_modifier = modifier_tge_capital_sacrifice
+				}
+			}
+		}
+		scope:tge_sacrifice_scope_1 = {
+			add_modifier = {
+				name = modifier_tge_capital_sacrifice
+				months = 24
+			}
+		}
+	}
+
+	option = {
+		name = tge_tonalism.022.b
+		trigger = {
+			exists = scope:tge_sacrifice_scope_2
+		}
+		scope:tge_sacrifice_scope_2 = {
+			add_modifier = {
+				name = modifier_tge_animal_sacrifice
+				months = 24
+			}
+		}
+	}
+
+	option = {
+		name = tge_tonalism.022.c
+		trigger = {
+			exists = scope:tge_sacrifice_scope_3
+		}
+		scope:tge_sacrifice_scope_3 = {
+			add_modifier = {
+				name = modifier_tge_animal_sacrifice
+				months = 24
+			}
+		}
+	}
+
+	after = {
+		remove_variable = tge_considering_sacrifice_var
+	}
+
+}
+
+tge_tonalism.023 = { # Gold Offered as a Sacrifice
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = tge_tonalism.023.t
+	desc = tge_tonalism.023.d
+	flavor = tge_tonalism.023.f
+
+	event_image = {
+		video = "media_alias"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 1
+
+	dlc = dlc_tge
+
+	trigger = {
+		# triggered by tge_host_gold_sacrifice_button
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_journal_entry = je_tge_tonalism_new_fire
+		}
+	}
+
+	immediate = {
+		capital = {
+			save_scope_as = tge_sacrifice_scope_1
+		}
+		random_scope_state = {
+			limit = {
+				NOT = {
+					scope:tge_sacrifice_scope_1 = this
+				}
+				any_scope_pop = {
+					is_pop_type = slaves
+				}
+			}
+			save_scope_as = tge_sacrifice_scope_2
+		}
+		random_scope_state = {
+			limit = {
+				NOR = {
+					scope:tge_sacrifice_scope_1 = this
+					scope:tge_sacrifice_scope_2 = this
+				}
+				any_scope_pop = {
+					is_pop_type = slaves
+				}
+			}
+			save_scope_as = tge_sacrifice_scope_3
+		}
+	}
+
+	option = {
+		name = tge_tonalism.023.a
+		default_option = yes
+		scope:tge_sacrifice_scope_1 = {
+			add_modifier = {
+				name = modifier_tge_human_sacrifice
+				months = 24
+			}
+		}
+	}
+
+	option = {
+		name = tge_tonalism.023.b
+		trigger = {
+			exists = scope:tge_sacrifice_scope_2
+		}
+		scope:tge_sacrifice_scope_2 = {
+			add_modifier = {
+				name = modifier_tge_human_sacrifice
+				months = 24
+			}
+		}
+	}
+
+	option = {
+		name = tge_tonalism.023.c
+		trigger = {
+			exists = scope:tge_sacrifice_scope_3
+		}
+		scope:tge_sacrifice_scope_3 = {
+			add_modifier = {
+				name = modifier_tge_human_sacrifice
+				months = 24
+			}
+		}
+	}
+
+	after = {
+		remove_variable = tge_considering_sacrifice_var
+	}
+
+}
+
 ## Tonalism Decision Events ##
 tge_tonalism.040 = { # Bloodletting Revived
 	type = country_event
