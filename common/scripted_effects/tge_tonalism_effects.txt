@@ -15,7 +15,7 @@
 	scope:journal_entry = {
 		set_bar_progress = {
 			name = tge_tonalism_progressbar
-			value = var:tge_tonalli_var
+			value = owner.var:tge_tonalli_var
 		}
 	}
 	remove_modifier = modifier_tge_tonalli

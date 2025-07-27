@@ -59,7 +59,7 @@
 			scope:journal_entry = {
 				set_bar_progress = {
 					name = tge_golden_eagle_progressbar
-					value = var:tge_golden_eagle_var
+					value = owner.var:tge_golden_eagle_var
 				}
 			}
 		}
@@ -79,7 +79,7 @@
 			scope:journal_entry = {
 				set_bar_progress = {
 					name = tge_golden_eagle_progressbar
-					value = var:tge_golden_eagle_var
+					value = owner.var:tge_golden_eagle_var
 				}
 			}
 		}

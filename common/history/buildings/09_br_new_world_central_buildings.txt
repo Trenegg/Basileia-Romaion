@@ -971,7 +971,7 @@
 		}
 	}
 	s:STATE_GUERRERO={
-		region_state:NAH={
+		region_state:MIX={
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
@@ -1003,7 +1003,7 @@
 						type="building_financial_district"
 						country="c:MIX"
 						levels=1
-						region="STATE_MEXICO"
+						region="STATE_GUERRERO"
 					}
 				}
 				reserves=1
@@ -1653,7 +1653,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_br_traditional_building_dye_plantation" "pm_road_carts" }
+				activate_production_methods={ "pm_br_traditional_farming" "pm_citrus_orchards" "pm_tools_disabled" }
 			}
 		}
 		region_state:MAY_TZO={
@@ -1948,37 +1948,24 @@
 				reserves=1
 				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" }
 			}	
-		}	
-		region_state:br_new_granada={
+		}
+	}
+	s:STATE_COSTA_RICA={
+		region_state:NAH_PIP={
 			create_building={
 				building="building_banana_plantation"
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:MAY_PAN"
+						country="c:NAH_PIP"
 						levels=1
-						region="STATE_YUCATAN"
+						region="STATE_SAN_SALVADOR"
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_br_traditional_building_banana_plantation" "pm_road_carts" }
 			}
-			create_building={
-				building="building_tobacco_plantation"
-				add_ownership={
-					building={
-						type="building_manor_house"
-						country="c:br_atlantica"
-						levels=1
-						region="STATE_CUBA"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_br_traditional_building_tobacco_plantation" "pm_road_carts" }
-			}
 		}
-	}
-	s:STATE_COSTA_RICA={
 	}
 	s:STATE_FLORIDA={
 		region_state:br_atlantica={
