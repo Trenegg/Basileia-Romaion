@@ -162,13 +162,6 @@ company_br_byz_mining_steel = {
 		prestige_good_generic_steel
 	}
 
-	prestige_goods_trigger = {
-		custom_tooltip = {
-			text = je_prestige_goods_steel_complete_tt
-			has_variable = prestige_good_generic_steel_var
-		}
-	}
-
 	potential = {
 		country_has_primary_culture = cu:greek
 	}
@@ -263,7 +256,7 @@ company_br_byz_rus = {
 	prosperity_modifier = {
 		state_trade_capacity_mult = 0.1
 		state_trade_advantage_mult = 0.1
-		building_group_bg_logging_throughput_add = 0.1
+		goods_output_wood_mult = 0.1
 	}
 
 	ai_weight = {

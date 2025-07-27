@@ -582,10 +582,11 @@
 			create_building={
 				building="building_port"
 				add_ownership={
-					company={
-						type=company_gen_trade
-						country="c:br_genoa"
+					building={
+						type="building_manor_house"
+						country="c:br_blacksea_colonies"
 						levels=1
+						region="STATE_KUBAN"
 					}
 				}
 				reserves=1
@@ -1299,10 +1300,16 @@
 						levels=2
 						region="STATE_TARTARIA"
 					}
+					company={
+						type=company_br_byz_rus
+						country="c:br_taurica"
+						levels=1
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_br_early_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_horse_drawn" "pm_horse_drawn_transport" }
 			}
+			
 			create_building={
 				building="building_iron_mine"
 				add_ownership={
@@ -1589,10 +1596,11 @@
 			create_building={
 				building="building_port"
 				add_ownership={
-					company={
-						type=company_gen_trade
-						country="c:br_genoa"
+					building={
+						type="building_manor_house"
+						country="c:br_blacksea_colonies"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -1759,10 +1767,11 @@
 			create_building={
 				building="building_port"
 				add_ownership={
-					company={
-						type=company_ven_trade
+					building={
+						type="building_manor_house"
 						country="c:VEN"
 						levels=1
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -1947,10 +1956,11 @@
 			create_building={
 				building="building_port"
 				add_ownership={
-					company={
-						type=company_ven_trade
+					building={
+						type="building_manor_house"
 						country="c:VEN"
 						levels=1
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1

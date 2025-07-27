@@ -88,6 +88,13 @@
  br_tech_natural_history_desc: "The study of plants, animals, and minerals, with a focus on classification, description, and observation."
  br_tech_hostile_climate_colonization: "Early Hostile Climate Colonization"
  br_tech_hostile_climate_colonization_desc: "Allows earlier colonization of provinces with a hostile climate."
+ br_tech_mercantile_companies: "Mercantile Companies"
+ br_tech_mercantile_companies_desc: "The establishment of chartered companies that are granted exclusive rights to trade and colonize specific regions. These companies often played a significant role in European expansion and imperialism."
+ br_tech_administrative_formalization: "Administrative Formalization"
+ br_tech_administrative_formalization_desc: "The process of creating formal structures and procedures for managing government functions and public administration. This includes the establishment of standardized bureaucracies, legal systems, and administrative practices."
+ br_tech_constitutional_guarantees: "Constitutional Guarantees"
+ br_tech_constitutional_guarantees_desc: "Democratic reforms give rise to legal frameworks that explicitly protect the rights of all citizens. By embedding equality and freedoms into constitutional law, states begin to move beyond representation toward true legal parity."
+
 
  # Military
  br_tech_supply_train: "Supply Train"
@@ -130,6 +137,8 @@
  br_tech_japanese_luxuries_desc: "Japan's refined traditions in silk weaving, tea cultivation, and ceramic artistry contribute to a steady flow of elegant luxury goods prized both at home and abroad."
  br_tech_indian_luxuries: "Indian Luxuries"
  br_tech_indian_luxuries_desc: "India’s rich soils and deep artisan traditions provide a natural advantage in producing aromatic teas, vivid dyes, and exotic spices, fueling both domestic industries and global trade."
+ br_tech_english_fabric: "English Woolen Boom"
+ br_tech_english_fabric_desc: "The vast sheep pastures of England give rise to a flourishing woolen industry. As textile workshops expand, fabric output surges—though at the cost of traditional meat production. The green hills now hum with the labor of the loom rather than the lowing of cattle."
 
 
  br_tech_greekfire: "Greekfire" #aka Liquid Fire
