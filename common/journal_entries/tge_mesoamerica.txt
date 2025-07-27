@@ -1,5 +1,5 @@
 ﻿je_tge_golden_eagle = {
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	icon = "gfx/interface/icons/event_icons/event_aztec.dds"
 	group = je_group_internal_affairs
 	
 	should_be_pinned_by_default = yes
@@ -90,7 +90,7 @@
 }
 
 je_tge_aztlan = {
-	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	icon = "gfx/interface/icons/event_icons/event_aztec.dds"
 	group = je_group_foreign_affairs
 	
 	should_be_pinned_by_default = yes
