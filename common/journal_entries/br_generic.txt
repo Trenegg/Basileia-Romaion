@@ -8,6 +8,11 @@
         br_modifier_gain_independence
     }
 
+	is_shown_in_lobby = {
+		is_subject = yes
+		is_country_type = recognized
+	}
+
 	is_shown_when_inactive = {
 		is_subject = yes
 		is_country_type = recognized
@@ -54,6 +59,11 @@ je_br_east_indies_trade = {
         br_modifier_spice_trade
     }
 
+	is_shown_in_lobby = {
+		has_interest_marker_in_region = region_indonesia
+		is_country_type = recognized
+	}
+
 	is_shown_when_inactive = {
 		#game_date < 1866.1.1
 		has_interest_marker_in_region = region_indonesia
@@ -80,9 +90,9 @@ je_br_east_indies_trade = {
 			}
 		}
 		NOT = { 
-			has_law = law_type:law_free_trade
+			has_law_or_variant = law_type:law_free_trade
 			has_modifier = br_modifier_spice_monopoly
-			has_law = law_type:law_no_colonial_affairs
+			has_law_or_variant = law_type:law_no_colonial_affairs
 		}
 		is_country_type = recognized
 	}
@@ -136,6 +146,11 @@ je_br_west_indies_trade = {
         br_modifier_sugar_trade
     }
 
+	is_shown_in_lobby = {
+		has_interest_marker_in_region = region_caribbean
+		is_country_type = recognized
+	}
+
 	is_shown_when_inactive = {
 		has_interest_marker_in_region = region_caribbean
 		is_country_type = recognized
@@ -180,8 +195,8 @@ je_br_west_indies_trade = {
 			}
 		}
 		NOT = { 
-			has_law = law_type:law_free_trade
-			has_law = law_type:law_no_colonial_affairs
+			has_law_or_variant = law_type:law_free_trade
+			has_law_or_variant = law_type:law_no_colonial_affairs
 			#has_modifier = br_modifier_piracy_victim
 		}
 		is_country_type = recognized
@@ -389,7 +404,7 @@ je_br_baltic_toll_collection_rights = {
 			}
 		}
 		NOT = { 
-			has_law = law_type:law_free_trade
+			has_law_or_variant = law_type:law_free_trade
 		}
 		is_country_type = recognized
 	}
@@ -411,7 +426,7 @@ je_br_baltic_toll_collection_rights = {
 				}
 			}
 		}
-		has_law = law_type:law_free_trade
+		has_law_or_variant = law_type:law_free_trade
 	}
 	
 	
@@ -454,7 +469,7 @@ je_br_strait_of_hercules = {
 			}
 		}
 		NOT = { 
-			has_law = law_type:law_free_trade
+			has_law_or_variant = law_type:law_free_trade
 		}
 		is_country_type = recognized
 	}
@@ -480,7 +495,7 @@ je_br_strait_of_hercules = {
 				}
 			}
 		}
-		has_law = law_type:law_free_trade
+		has_law_or_variant = law_type:law_free_trade
 	}
 
 	
@@ -519,7 +534,7 @@ je_br_bosphorus_strait_toll = {
 		}
 		NOT = { 
 			has_modifier = br_modifier_latin_privileges
-			has_law = law_type:law_free_trade
+			has_law_or_variant = law_type:law_free_trade
 		}
 		is_country_type = recognized
 	}
@@ -540,7 +555,7 @@ je_br_bosphorus_strait_toll = {
 			}
 		}
 		has_modifier = br_modifier_latin_privileges
-		has_law = law_type:law_free_trade
+		has_law_or_variant = law_type:law_free_trade
 	}
 		
 }
@@ -571,7 +586,7 @@ je_br_klysma_canal_toll = {
 		}
 		NOT = { 
 			has_modifier = br_modifier_latin_privileges
-			has_law = law_type:law_free_trade
+			has_law_or_variant = law_type:law_free_trade
 		}
 		is_country_type = recognized
 	}
@@ -587,7 +602,7 @@ je_br_klysma_canal_toll = {
 			}
 		}
 		has_modifier = br_modifier_latin_privileges
-		has_law = law_type:law_free_trade
+		has_law_or_variant = law_type:law_free_trade
 	}
 
 		
@@ -624,7 +639,7 @@ je_br_persian_strait_toll = {
 			}
 		}
 		NOT = { 
-			has_law = law_type:law_free_trade
+			has_law_or_variant = law_type:law_free_trade
 		}
 		is_country_type = recognized
 	}
@@ -646,7 +661,7 @@ je_br_persian_strait_toll = {
 				}
 			}
 		}
-		has_law = law_type:law_free_trade
+		has_law_or_variant = law_type:law_free_trade
 	}
 
 	#timeout = 27375
@@ -676,8 +691,8 @@ je_br_hajj_profits = {
 		has_state_in_state_region = STATE_HEDJAZ
 		NOT = { 
 			OR = {
-				has_law = law_type:law_state_atheism
-				has_law = law_type:law_total_separation
+				has_law_or_variant = law_type:law_state_atheism
+				has_law_or_variant = law_type:law_total_separation
 			}	
 		}
 	}
@@ -689,8 +704,8 @@ je_br_hajj_profits = {
 			}
 		}
 		OR = {
-			has_law = law_type:law_state_atheism
-			has_law = law_type:law_total_separation
+			has_law_or_variant = law_type:law_state_atheism
+			has_law_or_variant = law_type:law_total_separation
 		}
 	}
 
@@ -718,16 +733,16 @@ je_br_tithe_profits = {
 		c:PAP = ROOT
 		NOT = { 
 			OR = {
-				has_law = law_type:law_state_atheism
-				has_law = law_type:law_total_separation
+				has_law_or_variant = law_type:law_state_atheism
+				has_law_or_variant = law_type:law_total_separation
 			}	
 		}
 	}
 
 	invalid = {
 		OR = {
-			has_law = law_type:law_state_atheism
-			has_law = law_type:law_total_separation
+			has_law_or_variant = law_type:law_state_atheism
+			has_law_or_variant = law_type:law_total_separation
 		}
 	}
 		

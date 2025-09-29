@@ -117,10 +117,10 @@ HRE = {
 		trigger = { 
 			scope:actor ?= {
 				OR = {
-					has_law = law_type:law_presidential_republic
-					has_law = law_type:law_parliamentary_republic
+					has_law_or_variant = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_parliamentary_republic
 				}
-				has_law = law_type:law_technocracy
+				has_law_or_variant = law_type:law_technocracy
 			}
 		}
 	}
@@ -178,7 +178,7 @@ BYZ = {
 		priority = 1500
 		trigger = { 
 			scope:actor ?= {
-				has_law = law_type:law_monarchy
+				has_law_or_variant = law_type:law_monarchy
 			}
 		}
 	}
@@ -198,7 +198,7 @@ BYZ = {
 		priority = 100
 		trigger = {
 			scope:actor ?= {
-				has_law = law_type:law_theocracy
+				has_law_or_variant = law_type:law_theocracy
 			}
 		}
 	}
@@ -216,4 +216,21 @@ BYZ = {
 	}
 }
 
-
+br_WRE = {
+	flag_definition = {
+		coa = WRE
+		allow_overlord_canton = yes
+		subject_canton = WRE
+	}
+	flag_definition = {
+		coa = WRE2
+		allow_overlord_canton = yes
+		subject_canton = WRE
+		priority = 100
+		trigger = {
+			scope:actor ?= {
+				has_variable = br_wre_alternate_flag_var
+			}
+		}
+	}
+}

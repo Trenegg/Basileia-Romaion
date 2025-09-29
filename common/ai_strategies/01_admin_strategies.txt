@@ -67,6 +67,13 @@
 		}
 
 		if = {
+			limit = {
+				is_princely_state = yes
+			}
+			add = 10
+		}
+
+		if = {
 			limit = { literacy_rate < 0.25 }
 			multiply = 1.5
 		}
@@ -84,7 +91,7 @@
 		if = {
 			limit = {
 				exists = ig:ig_landowners
-				ig:ig_landowners = { is_powerful = yes }
+				ig:ig_landowners ?= { is_powerful = yes }
 			}
 			multiply = 1.5
 		}
@@ -96,7 +103,7 @@
 					OR = {
 						AND = {
 							is_ai = no
-							NOT = { has_law = law_type:law_traditionalism }
+							NOT = { has_law_or_variant = law_type:law_traditionalism }
 						}
 						has_strategy = ai_strategy_resource_expansion
 						has_strategy = ai_strategy_industrial_expansion
@@ -168,9 +175,16 @@ ai_strategy_plantation_economy = {
 		if = {
 			limit = {
 				exists = ig:ig_landowners
-				ig:ig_landowners = { is_powerful = yes }
+				ig:ig_landowners ?= { is_powerful = yes }
 			}
 			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				is_princely_state = yes
+			}
+			add = 20
 		}
 
 		if = {
@@ -274,7 +288,7 @@ ai_strategy_resource_expansion = {
 					OR = {
 						AND = {
 							is_ai = no
-							NOT = { has_law = law_type:law_traditionalism }
+							NOT = { has_law_or_variant = law_type:law_traditionalism }
 						}
 						has_strategy = ai_strategy_resource_expansion
 						has_strategy = ai_strategy_industrial_expansion
@@ -383,9 +397,18 @@ ai_strategy_industrial_expansion = {
 			add = 50
 		}
 
+		# Metternich agenda of 1844 - inclined to industrialise
 		if = {
 			limit = {
-				has_law = law_type:law_command_economy
+				c:AUS ?= this
+				has_journal_entry = je_metternich
+			}
+           add = 10
+		}
+
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_command_economy
 			}
 			multiply = 2
 		}
@@ -461,7 +484,7 @@ ai_strategy_placate_population = {
 	}
 
 	possible = {
-		has_law = law_type:law_traditionalism
+		has_law_or_variant = law_type:law_traditionalism
 	}
 
 	weight = {
@@ -497,7 +520,7 @@ ai_strategy_placate_population = {
 		if = {
 			limit = {
 				exists = ig:ig_rural_folk
-				ig:ig_rural_folk = { is_powerful = yes }
+				ig:ig_rural_folk ?= { is_powerful = yes }
 			}
 			multiply = 1.5
 		}
@@ -509,7 +532,7 @@ ai_strategy_placate_population = {
 					OR = {
 						AND = {
 							is_ai = no
-							NOT = { has_law = law_type:law_traditionalism }
+							NOT = { has_law_or_variant = law_type:law_traditionalism }
 						}
 						has_strategy = ai_strategy_resource_expansion
 						has_strategy = ai_strategy_industrial_expansion

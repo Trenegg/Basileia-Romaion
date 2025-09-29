@@ -109,7 +109,7 @@ on_law_activated = {
 #				limit = {
 #					has_journal_entry = je_palaiologos_reforms_land_reform
 #					has_modifier = br_modifier_corrupt_pronoia
-#					has_law = law_type:law_tenant_farmers
+#					has_law_or_variant = law_type:law_tenant_farmers
 #				}
 #				trigger_event = {
 #					id = palaiologos_events.3
@@ -264,8 +264,8 @@ br_on_state_occupied = {
 			if = {
 				limit = {
 					any_scope_state = {
-						owner = c:HRE
-						controller ?= c:FLA
+						c:HRE ?= owner
+						c:FLA ?= controller
 					}
 				}
 				c:HRE = {
@@ -288,6 +288,37 @@ br_on_state_occupied = {
 	}
 }
 
+on_country_formed ={
+	on_actions = {
+		on_wre_formed
+	}
+}
+on_wre_formed = {
+	effect = {
+		if = {
+			limit = {
+				c:br_WRE ?= ROOT
+			}
+			trigger_event = { id = br_wre_event.1 popup = yes }
+		}
+	}
+}
+
+on_acquired_technology = {
+	on_actions = {
+		br_on_nationalism_acquired
+	}
+}
+
+br_on_nationalism_acquired = {
+	events = {
+		poland.7
+	}
+}
+
+###
+###grefm
+###
 grefm_monthly_pulse_1 = {
 	trigger = {
 		country_has_primary_culture = cu:greek

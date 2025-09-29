@@ -11,6 +11,23 @@
 		#set_tariffs_import_priority = g:artillery
 		#set_tariffs_import_priority = g:small_arms
 
+		set_import_tariff_level = { 
+			goods = g:wood
+			level = high_tariffs
+		}
+		set_export_tariff_level = { 
+			goods = g:wood
+			level = high_subventions
+		}
+		set_import_tariff_level = { 
+			goods = g:iron
+			level = high_tariffs
+		}
+		set_export_tariff_level = { 
+			goods = g:iron
+			level = high_subventions
+		}
+
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_oligarchy
 		activate_law = law_type:law_freedom_of_conscience
@@ -18,7 +35,7 @@
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_local_police
-		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_subjecthood
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_agrarianism
 		activate_law = law_type:law_private_schools
@@ -26,7 +43,7 @@
 		activate_law = law_type:law_national_guard
 		activate_law = law_type:law_mixed_army
 		activate_law = law_type:law_migration_controls
-		activate_law = law_type:law_legacy_slavery
+		activate_law = law_type:law_colonial_slavery
 			
 		ig:ig_armed_forces = {
 			add_ruling_interest_group = yes

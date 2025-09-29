@@ -46,7 +46,7 @@ ai_strategy_romaion_expansion = {
 					}	
 				}
 			}
-			add = 50
+			add = 75
 		}
 		
 		if = {
@@ -118,25 +118,27 @@ ai_strategy_romaion_expansion = {
 
 	secret_goal_scores = {
 		conquer = {
-			if = {
-				limit = {
-					can_reach_target_country = yes
-					has_strategic_adjacency = scope:target_country
-					scope:target_country.country_rank <= root.country_rank
-				}
-				
+			score = {
 				if = {
 					limit = {
-						NOT = { is_country_type = unrecognized }
-						scope:target_country = { NOT = { is_country_type = unrecognized } }
+						can_reach_target_country = yes
+						has_strategic_adjacency = scope:target_country
+						scope:target_country.country_rank <= root.country_rank
 					}
-					add = 25
-				}		
-				else_if = {
-					limit = {				
-						scope:target_country = { is_country_type = unrecognized }						
+					
+					if = {
+						limit = {
+							NOT = { is_country_type = unrecognized }
+							scope:target_country = { NOT = { is_country_type = unrecognized } }
+						}
+						add = 25
+					}		
+					else_if = {
+						limit = {				
+							scope:target_country = { is_country_type = unrecognized }						
+						}
+						add = 50
 					}
-					add = 50
 				}
 			}
 		}
@@ -185,7 +187,7 @@ ai_strategy_trade_imperialism = {
 	}
 	
 	diplomatic_play_boldness = {
-		value = 10
+		value = 25
 	}
 	
 	recklessness = {
@@ -271,44 +273,47 @@ ai_strategy_trade_imperialism = {
 	}
 	
 	secret_goal_scores = {
-		dominate = {	
-			if = {
-				limit = {
-					has_strategic_adjacency = scope:target_country
-					root.country_rank > scope:target_country.country_rank
-					scope:target_country.country_rank < rank_value:major_power
-					scope:target_country = {
-						NOR = { 
-							has_law = law_type:law_free_trade 
-							has_law = law_type:law_isolationism
-						}
-					}
-				}
-				add = 50
-				
+		dominate = {
+			score = {
 				if = {
 					limit = {
+						has_strategic_adjacency = scope:target_country
+						root.country_rank > scope:target_country.country_rank
+						scope:target_country.country_rank < rank_value:major_power
+						scope:target_country = {
+							NOR = { 
+								has_law_or_variant = law_type:law_free_trade 
+								has_law_or_variant = law_type:law_isolationism
+							}
+						}
+					}
+					add = 50
+					
+					if = {
+						limit = {
+							scope:target_country = { is_country_type = unrecognized }
+						}
+						add = 50
+					}
+				}
+			}
+		}		
+		conquer = {
+			score = {
+				if = {
+					limit = {
+						has_strategic_adjacency = scope:target_country
 						scope:target_country = { is_country_type = unrecognized }
 					}
 					add = 50
 				}
-			}		
-		}		
-		conquer = {		
-			if = {
-				limit = {
-					has_strategic_adjacency = scope:target_country
-					scope:target_country = { is_country_type = unrecognized }
+				if = {
+					limit = {
+						scope:target_country = { NOT = { is_country_type = unrecognized } }
+					}
+					add = -50
 				}
-				add = 50
 			}
-			if = {
-				limit = {
-					scope:target_country = { NOT = { is_country_type = unrecognized } }
-				}
-				add = -50
-			}
-			
 		}		
 	}
 
@@ -322,7 +327,7 @@ ai_strategy_trade_imperialism = {
 			limit = {
 				can_reach_target_state = yes
 				scope:target_country = {
-					has_law = law_type:law_isolationism
+					has_law_or_variant = law_type:law_isolationism
 					gdp >= 2000000 # Not worth doing against very small markets
 				}
 				scope:target_state = { is_incorporated = yes }
@@ -348,7 +353,7 @@ ai_strategy_trade_imperialism = {
 					country_rank = rank_value:great_power
 					can_reach_target_country = yes
 					scope:target_country = {
-						has_law = law_type:law_isolationism
+						has_law_or_variant = law_type:law_isolationism
 						gdp >= 5000000 # Not worth doing against small markets
 					}
 				}

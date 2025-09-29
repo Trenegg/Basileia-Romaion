@@ -8,6 +8,10 @@
 		br_steppe_colonial_expansion
 	}
 
+	is_shown_in_lobby = {
+		c:br_tartaria ?= this
+	}
+
 	is_shown_when_inactive = {
 		exists = c:br_tartaria
 		this = c:br_tartaria
@@ -16,7 +20,7 @@
 	possible = {
 		exists = c:br_tartaria
 		this = c:br_tartaria
-		has_law = law_type:law_frontier_colonization
+		has_law_or_variant = law_type:law_frontier_colonization
 	}
 
 	complete = {
@@ -45,7 +49,7 @@
 	}
 
 	invalid = {
-		NOT = { has_law = law_type:law_frontier_colonization } #So player won't abuse the buff to colonize the world
+		NOT = { has_law_or_variant = law_type:law_frontier_colonization } #So player won't abuse the buff to colonize the world
 	}
 	
 	on_complete = {
@@ -88,6 +92,10 @@ je_tartaria_modernize = {
         br_modifier_decentralized_khanate
     }
 
+	is_shown_in_lobby = {
+		c:br_tartaria ?= this
+	}
+
 	is_shown_when_inactive = {
 		exists = c:br_tartaria
 		this = c:br_tartaria
@@ -100,15 +108,15 @@ je_tartaria_modernize = {
 
 	complete = {
 		NOT = { 
-			has_law = law_type:law_peasant_levies
-			has_law = law_type:law_no_home_affairs
-			has_law = law_type:law_hereditary_bureaucrats
-			has_law = law_type:law_oligarchy
-			has_law = law_type:law_traditionalism 
-			has_law = law_type:law_land_based_taxation 
-			has_law = law_type:law_debt_slavery 
-			has_law = law_type:law_tribal_armies 
-			has_law = law_type:law_industry_banned 
+			has_law_or_variant = law_type:law_peasant_levies
+			has_law_or_variant = law_type:law_no_home_affairs
+			has_law_or_variant = law_type:law_hereditary_bureaucrats
+			has_law_or_variant = law_type:law_oligarchy
+			has_law_or_variant = law_type:law_traditionalism 
+			has_law_or_variant = law_type:law_land_based_taxation 
+			has_law_or_variant = law_type:law_debt_slavery 
+			has_law_or_variant = law_type:law_tribal_armies 
+			has_law_or_variant = law_type:law_industry_banned 
 		}
 	}
 	on_complete = {
@@ -142,6 +150,10 @@ je_tartaria_end_slavic_oppression = {
         br_modifier_horde_slavic_oppression
     }
 
+	is_shown_in_lobby = {
+		c:br_tartaria ?= this
+	}
+
 	is_shown_when_inactive = {
 		exists = c:br_tartaria
 		this = c:br_tartaria
@@ -154,11 +166,11 @@ je_tartaria_end_slavic_oppression = {
 
 	complete = {
 		NOT = { 
-			has_law = law_type:law_ethnostate
-			has_law = law_type:law_national_supremacy
-			has_law = law_type:law_racial_segregation
-			has_law = law_type:law_state_religion
-			has_law = law_type:law_debt_slavery 
+			has_law_or_variant = law_type:law_ethnostate
+			has_law_or_variant = law_type:law_national_supremacy
+			has_law_or_variant = law_type:law_racial_segregation
+			has_law_or_variant = law_type:law_state_religion
+			has_law_or_variant = law_type:law_debt_slavery 
 		}
 	}
 	on_complete = {

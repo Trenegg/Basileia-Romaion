@@ -4,33 +4,62 @@
 		### Royalist movements
 		if = {
 			limit = {
-				has_law = law_type:law_monarchy
+				has_law_or_variant = law_type:law_monarchy
 				country_has_voting_franchise = no
 			}
 			create_political_movement = { type = movement_royalist_absolutist }
 		}
 		else_if = {
 			limit = {
-				has_law = law_type:law_monarchy
+				has_law_or_variant = law_type:law_monarchy
 				country_has_voting_franchise = yes
 			}
 			create_political_movement = { type = movement_royalist_constitutional }
 		}
 
+		### Liberal movements
+		if = {
+			limit = {
+				has_technology_researched = democracy
+				OR = {
+					has_law_or_variant = law_type:law_landed_voting
+					has_law_or_variant = law_type:law_wealth_voting
+					has_law_or_variant = law_type:law_census_voting
+					has_law_or_variant = law_type:law_universal_suffrage
+				}
+			}
+			create_political_movement = { type = movement_liberal }
+		}
+
+		### Labour movements
+		if = {
+			limit = {
+				has_technology_researched = labor_movement
+			}
+			create_political_movement = { type = movement_labor }
+		}
+
 		### Abolitionist movements
 		if = {
 			limit = {
-				NOT = { has_law = law_type:law_slavery_banned }
+				NOT = { has_law_or_variant = law_type:law_slavery_banned }
 			}
-			create_political_movement = { type = movement_pro_slavery }
-			
 			if = {
-				limit = { 
-					has_technology_researched = empiricism 
+				limit = {
+					NOT = {
+						has_law_or_variant = law_type:law_colonial_slavery
+					}
+				}
+				create_political_movement = { type = movement_pro_slavery }
+			}
+			if = {
+				limit = {
+					has_technology_researched = empiricism
+					NOT = { c:BIC ?= this } # British India has Utilitarians
 				}
 				create_political_movement = { type = movement_anti_slavery }
 			}
-		}		
+		}
 
 		### Religious movements
 		if = {
@@ -40,8 +69,7 @@
 			create_political_movement = { type = movement_religious_minority religion = rel:hindu }
 			create_political_movement = { type = movement_religious_minority religion = rel:sikh }
 		}
-
-		else_if = {
+		else_if = { # France gets Legitimists instead
 			limit = {
 				NOT = {
 					c:FRA ?= this
@@ -51,9 +79,6 @@
 		}
 
 		### Cultural majority movements
-		create_political_movement = { type = movement_cultural_majority }
-
-		### Labour movements
 		if = {
 			limit = {
 				has_technology_researched = labor_movement
@@ -66,10 +91,10 @@
 			limit = {
 				has_technology_researched = democracy
 				OR = {
-					has_law = law_type:law_landed_voting
-					has_law = law_type:law_wealth_voting
-					has_law = law_type:law_census_voting
-					has_law = law_type:law_universal_suffrage
+					has_law_or_variant = law_type:law_landed_voting
+					has_law_or_variant = law_type:law_wealth_voting
+					has_law_or_variant = law_type:law_census_voting
+					has_law_or_variant = law_type:law_universal_suffrage
 					is_subject_of = c:HRE
 				}
 				#NOT = { c:TAG ?= this }
@@ -77,39 +102,140 @@
 			create_political_movement = { type = movement_liberal }
 		}
 	}	
-	c:BYZ ?= {
-		#create_political_movement = { type = movement_cultural_minority culture = cu:latinoi }
-		create_political_movement = { type = movement_cultural_minority culture = cu:armenian }
+	c:HUN ?= {
+		create_political_movement = { type = movement_liberal }
 		create_political_movement = { type = movement_cultural_minority culture = cu:serb }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority culture = cu:serb
+			}
+			set_suppression = yes
+		}
+	}
+	c:CRO ?= {
+		create_political_movement = { type = movement_yugoslav_national }
+	}
+	c:SER ?= {
+		create_political_movement = { type = movement_yugoslav_national }
+	}
+	c:BYZ ?= {
+		create_political_movement = { type = movement_cultural_minority culture = cu:armenian }
 		create_political_movement = { type = movement_cultural_minority culture = cu:bulgarian }
-		#create_political_movement = { type = movement_cultural_minority culture = cu:syriac }
 		create_political_movement = { type = movement_religious_minority religion = rel:sunni }
-		#create_political_movement = { type = movement_religious_minority religion = rel:oriental_orthodox }
 		create_political_movement = { type = movement_land_reform }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority culture = cu:bulgarian
+			}
+			set_suppression = yes
+		}
 	}
 	c:PER ?= {
 		create_political_movement = { type = movement_religious_minority religion = rel:oriental_orthodox }
+		create_political_movement = { type = movement_cultural_minority culture = cu:bedouin }
 		create_political_movement = { type = movement_land_reform }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority culture = cu:bedouin
+			}
+			add_modifier = {
+				name = eastern_crisis_movement_attraction
+				days = very_long_modifier_time
+			}
+			set_suppression = yes
+		}
 	}
 	c:HRE ?= {
 		create_political_movement = { type = movement_cultural_minority culture = cu:frankish }
 		create_political_movement = { type = movement_religious_minority religion = rel:protestant }
 		create_political_movement = { type = movement_liberal }
+		create_political_movement = { type = movement_radical }
 		create_political_movement = { type = movement_land_reform }
 	}
 	c:PLC ?= {
 		create_political_movement = { type = movement_cultural_minority culture = cu:lithuanian }
 		create_political_movement = { type = movement_cultural_minority culture = cu:ukrainian }
 		create_political_movement = { type = movement_land_reform }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority culture = cu:ukrainian
+			}
+			add_modifier = {
+				name = eastern_crisis_movement_attraction
+				days = very_long_modifier_time
+			}
+			set_suppression = yes
+		}
+	}
+	c:br_aegypt ?= {
+		create_political_movement = { type = movement_cultural_minority culture = cu:misri }
+		create_political_movement = { type = movement_land_reform }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority culture = cu:misri
+			}
+			add_modifier = {
+				name = eastern_crisis_movement_radicalism
+				days = very_long_modifier_time
+			}
+			set_suppression = yes
+		}
+	}
+	c:br_africa ?= {
+		create_political_movement = { type = movement_cultural_minority culture = cu:maghrebi }
+		create_political_movement = { type = movement_land_reform }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority culture = cu:maghrebi
+			}
+			add_modifier = {
+				name = eastern_crisis_movement_radicalism
+				days = very_long_modifier_time
+			}
+			set_suppression = yes
+		}
 	}
 	c:br_tartaria ?= {
 		create_political_movement = { type = movement_modernizer }
 		create_political_movement = { type = movement_cultural_minority culture = cu:russian }
+		
 	}
 	c:NAH ?= {
 		create_political_movement = { type = movement_modernizer }
 	}
 	c:TWT ?= {
 		create_political_movement = { type = movement_modernizer }
+	}
+	c:LOM ?= {
+		create_political_movement = { type = movement_radical }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_radical
+			}
+			add_modifier = {
+				name = can_reformer_movement_fury
+				days = very_long_modifier_time
+			}
+		}
+	}
+	c:TUS ?= {
+		create_political_movement = { type = movement_radical }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_radical
+			}
+			add_modifier = {
+				name = can_reformer_movement_fury
+				days = very_long_modifier_time
+			}
+		}
+	}
+	c:BOH ?= {
+		create_political_movement = { type = movement_radical }
+		create_political_movement = { type = movement_liberal }
+	}
+	c:FLA ?= {
+		create_political_movement = { type = movement_radical }
+		create_political_movement = { type = movement_liberal }
 	}
 }

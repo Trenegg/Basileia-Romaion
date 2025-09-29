@@ -404,9 +404,10 @@
  Wada: "Wada"
  Waermund: "Wærmund"
  Waltheof: "Waltheof"
- Wilfrid: "Wilfrið"
+ #Wilfrid: "Wilfrið"  #moved to replace/names_l_english
  Wulfric: "Wulfric"
  Waegmund: "Wægmund"
+ Waldermar: "Waldermar"
  
  #Female First Names
  Aebbe: "Æbbe"
@@ -971,3 +972,18 @@
  Zhuruli: "Zhuruli"
  Zhvania: "Zhvania"
  Zvambaia: "Zvambaia"
+
+#Frankish
+ #Male First Names
+ Clovis: "Clovis"
+ #Female First Names
+ #Noble Last Names
+ Merovingian: "Merovingian"
+ #Common Last Names
+
+#Flemish
+ #Male First Names
+ #Female First Names
+ #Noble Last Names
+ Van_vlaanderen: "Van Vlaanderen"
+ #Common Last Names

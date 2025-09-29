@@ -1038,7 +1038,7 @@
 				pop_type = officers
 			}
 			create_pop = {
-				culture = colonial_italian
+				culture = amerigan
 				size = 22904
 			}
 			create_pop = {
@@ -1090,7 +1090,7 @@
 				size = 4000
 			}
 			create_pop = {
-				culture = colonial_italian
+				culture = amerigan
 				size = 125
 			}	
 			create_pop = {
@@ -1123,7 +1123,7 @@
 				pop_type = officers
 			}
 			create_pop = {
-				culture = colonial_italian
+				culture = amerigan
 				size = 13904
 			}
 			create_pop = {
@@ -1269,7 +1269,7 @@
 				pop_type = bureaucrats
 			}
 			create_pop = {
-				culture = colonial_italian
+				culture = amerigan
 				size = 12500
 			}
 			create_pop = {
@@ -1294,7 +1294,7 @@
 				size = 38000
 			}
 			create_pop = {
-				culture = colonial_italian
+				culture = amerigan
 				size = 1250
 			}	
 			create_pop = {
@@ -1448,7 +1448,7 @@
 				pop_type = officers
 			}
 			create_pop = {
-				culture = colonial_italian
+				culture = amerigan
 				size = 25000
 			}
 			create_pop = {
@@ -1486,7 +1486,7 @@
 				pop_type = bureaucrats
 			}
 			create_pop = {
-				culture = colonial_italian
+				culture = amerigan
 				size = 65000
 			}
 			create_pop = {
@@ -1502,7 +1502,7 @@
 		}
 		region_state:br_giamaica = {
 			create_pop = {
-				culture = colonial_italian
+				culture = amerigan
 				size = 1250
 			}
 			create_pop = {

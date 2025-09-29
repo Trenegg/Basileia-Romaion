@@ -3,6 +3,10 @@
 
 	group = je_group_internal_affairs
 
+	is_shown_in_lobby = {
+		c:BYZ ?= this
+	}
+
 	complete = {
 		country_rank >= rank_value:great_power
 		scope:journal_entry = {
@@ -74,10 +78,10 @@ je_palaiologos_reforms_economy = {
 
 	complete = {
 		NOR = { 
-			has_law = law_type:law_traditionalism
-			has_law = law_type:law_land_based_taxation
-			has_law = law_type:law_consumption_based_taxation
-			has_law = law_type:law_isolationism
+			has_law_or_variant = law_type:law_traditionalism
+			has_law_or_variant = law_type:law_land_based_taxation
+			has_law_or_variant = law_type:law_consumption_based_taxation
+			has_law_or_variant = law_type:law_isolationism
 		}
 		NOT = { has_modifier = br_modifier_latin_privileges }
 		taking_loans = no
@@ -340,8 +344,8 @@ je_palaiologos_reforms_security = {
 
 	complete = {
 		NOR = {
-			has_law = law_type:law_no_police
-			has_law = law_type:law_local_police
+			has_law_or_variant = law_type:law_no_police
+			has_law_or_variant = law_type:law_local_police
 		}
 		institution_investment_level = {
 			institution = institution_police
@@ -397,7 +401,7 @@ je_palaiologos_reforms_bureaucracy = {
 
 	complete = {
 		NOT = {
-			has_law = law_type:law_hereditary_bureaucrats
+			has_law_or_variant = law_type:law_hereditary_bureaucrats
 		}
 		NOT = { has_modifier = br_modifier_romaioi_bureaucratic_corruption }
 		any_scope_building = {
@@ -473,16 +477,16 @@ je_palaiologos_reforms_land_reform = {
 
 	complete = {
 		NOT = {
-			has_law = law_type:law_serfdom
-			has_law = law_type:law_traditionalism
+			has_law_or_variant = law_type:law_serfdom
+			has_law_or_variant = law_type:law_traditionalism
 		}
 	#	NOR = {
-	#		has_law = law_type:law_traditionalism
-	#		has_law = law_type:law_agrarianism
+	#		has_law_or_variant = law_type:law_traditionalism
+	#		has_law_or_variant = law_type:law_agrarianism
 	#	}
 	#	NOR = {
-	#		has_law = law_type:law_serfdom
-	#		has_law = law_type:law_tenant_farmers
+	#		has_law_or_variant = law_type:law_serfdom
+	#		has_law_or_variant = law_type:law_tenant_farmers
 	#	}
 		any_scope_building = {
 			is_building_type = building_wheat_farm
@@ -562,19 +566,19 @@ je_palaiologos_reforms_end_curruption = {
     complete = {
         OR = {
             AND = {
-                has_law = law_type:law_autocracy
-				has_law = law_type:law_appointed_bureaucrats
+                has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_appointed_bureaucrats
 				NOT = {
-                    has_law = law_type:law_hereditary_bureaucrats
-                    has_law = law_type:law_oligarchy
+                    has_law_or_variant = law_type:law_hereditary_bureaucrats
+                    has_law_or_variant = law_type:law_oligarchy
                 }
             }
             AND = {
-                has_law = law_type:law_elected_bureaucrats
-                #has_law = law_type:law_wealth_voting
+                has_law_or_variant = law_type:law_elected_bureaucrats
+                #has_law_or_variant = law_type:law_wealth_voting
                 NOT = {
-                    has_law = law_type:law_hereditary_bureaucrats
-                    has_law = law_type:law_oligarchy
+                    has_law_or_variant = law_type:law_hereditary_bureaucrats
+                    has_law_or_variant = law_type:law_oligarchy
                 }
             }
         }
@@ -664,11 +668,11 @@ je_palaiologos_reforms_end_latin_privileges = {
 	group = je_group_internal_affairs
 
     complete = {
-		has_law = law_type:law_interventionism
-		has_law = law_type:law_protectionism
+		has_law_or_variant = law_type:law_interventionism
+		has_law_or_variant = law_type:law_protectionism
 		NOT = {
-			#has_law = law_type:law_mercantilism
-			has_law = law_type:law_traditionalism
+			#has_law_or_variant = law_type:law_mercantilism
+			has_law_or_variant = law_type:law_traditionalism
 		}
     }
 
@@ -767,8 +771,8 @@ je_palaiologos_reforms_army = {
 		army_size >= 250
 		has_technology_researched = napoleonic_warfare
 		NOT = {
-			has_law = law_type:law_peasant_levies
-			has_law = law_type:law_serfdom
+			has_law_or_variant = law_type:law_peasant_levies
+			has_law_or_variant = law_type:law_serfdom
 		}
 		any_scope_building = {
 			filter = {
@@ -1032,10 +1036,22 @@ je_palaiologos_reforms_egypt = {
 				#country_or_subject_owns_entire_state_region = STATE_LOWER_EGYPT
 			}
 			AND = {
-				owns_entire_state_region = STATE_SINAI
-				owns_entire_state_region = STATE_UPPER_EGYPT
-				owns_entire_state_region = STATE_MIDDLE_EGYPT
-				owns_entire_state_region = STATE_LOWER_EGYPT
+				any_scope_state = {
+					state_region = s:STATE_UPPER_EGYPT
+					is_largest_state_in_region = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_MIDDLE_EGYPT
+					is_largest_state_in_region = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_LOWER_EGYPT
+					is_largest_state_in_region = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_SINAI
+					is_largest_state_in_region = yes
+				}
 			}
 		}
 	}
@@ -1117,10 +1133,22 @@ je_palaiologos_reforms_italy = {
 				country_or_subject_owns_entire_state_region = STATE_APULIA
 			}
 			AND = {
-				owns_entire_state_region = STATE_SICILY
-				owns_entire_state_region = STATE_CAMPANIA
-				owns_entire_state_region = STATE_CALABRIA
-				owns_entire_state_region = STATE_APULIA
+				any_scope_state = {
+					state_region = s:STATE_SICILY
+					is_largest_state_in_region = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_CAMPANIA
+					is_largest_state_in_region = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_CALABRIA
+					is_largest_state_in_region = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_APULIA
+					is_largest_state_in_region = yes
+				}
 			}
 		}
 	}
@@ -1181,9 +1209,18 @@ je_palaiologos_reforms_africa = {
 				country_or_subject_owns_entire_state_region = STATE_LIBYA
 			}
 			AND = {
-				owns_entire_state_region = STATE_TUNISIA
-				owns_entire_state_region = STATE_TRIPOLI
-				owns_entire_state_region = STATE_LIBYA
+				any_scope_state = {
+					state_region = s:STATE_TUNISIA
+					is_largest_state_in_region = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_TRIPOLI
+					is_largest_state_in_region = yes
+				}
+				any_scope_state = {
+					state_region = s:STATE_LIBYA
+					is_largest_state_in_region = yes
+				}
 			}
 		}
 	}
@@ -1357,18 +1394,36 @@ je_palaiologos_reforms_centralization_west = {
 
 	complete = {
 		# TODO add state modifer that needs to be removed to procede
-		country_or_subject_owns_entire_state_region = STATE_NORTHERN_SERBIA
-		country_or_subject_owns_entire_state_region = STATE_SOUTHERN_SERBIA
+		country_or_subject_owns_entire_state_region = STATE_WESTERN_SERBIA
+		country_or_subject_owns_entire_state_region = STATE_EASTERN_SERBIA
 		country_or_subject_owns_entire_state_region = STATE_MONTENEGRO
 		country_or_subject_owns_entire_state_region = STATE_BOSNIA
 		country_or_subject_owns_entire_state_region = STATE_WALLACHIA
 		country_or_subject_owns_entire_state_region = STATE_MOLDAVIA
-		owns_entire_state_region = STATE_ALBANIA
-		owns_entire_state_region = STATE_ATTICA
-		owns_entire_state_region = STATE_THESSALIA
-		owns_entire_state_region = STATE_PELOPONNESE
-		owns_entire_state_region = STATE_BULGARIA
-		owns_entire_state_region = STATE_DOBRUDJA
+		any_scope_state = {
+			state_region = s:STATE_ALBANIA
+			is_largest_state_in_region = yes
+		}
+		any_scope_state = {
+			state_region = s:STATE_ATTICA
+			is_largest_state_in_region = yes
+		}
+		any_scope_state = {
+			state_region = s:STATE_THESSALIA
+			is_largest_state_in_region = yes
+		}
+		any_scope_state = {
+			state_region = s:STATE_PELOPONNESE
+			is_largest_state_in_region = yes
+		}
+		any_scope_state = {
+			state_region = s:STATE_BULGARIA
+			is_largest_state_in_region = yes
+		}
+		any_scope_state = {
+			state_region = s:STATE_DOBRUDJA
+			is_largest_state_in_region = yes
+		}
 	}
 
 	on_complete = {
@@ -1425,11 +1480,20 @@ je_palaiologos_reforms_centralization_east= {
 	complete = {
 		# TODO add state modifer that needs to be removed to procede
 		country_or_subject_owns_entire_state_region = STATE_GREATER_CAUCASUS
-		country_or_subject_owns_entire_state_region = STATE_ANKARA
-		country_or_subject_owns_entire_state_region = STATE_ERZURUM
 		country_or_subject_owns_entire_state_region = STATE_KARS
-		country_or_subject_owns_entire_state_region = STATE_DIYARBAKIR
-		country_or_subject_owns_entire_state_region = STATE_TRABZON
+		country_or_subject_owns_entire_state_region = STATE_ERZURUM
+		any_scope_state = {
+			state_region = s:STATE_ANKARA
+			is_largest_state_in_region = yes
+		}
+		any_scope_state = {
+			state_region = s:STATE_TRABZON
+			is_largest_state_in_region = yes
+		}
+		any_scope_state = {
+			state_region = s:STATE_DIYARBAKIR
+			is_largest_state_in_region = yes
+		}
 	}
 
 	on_complete = {

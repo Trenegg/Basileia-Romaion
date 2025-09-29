@@ -1564,7 +1564,7 @@
 				size = 969200
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 55000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
@@ -1591,7 +1591,7 @@
 				size = 189292
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 45000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
@@ -1626,7 +1626,7 @@
 				size = 1375796
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 65000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
@@ -1661,7 +1661,7 @@
 				size = 160000
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 45000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
@@ -1690,7 +1690,7 @@
 				size = 444620
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 75000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
@@ -1718,14 +1718,14 @@
 			}
 		}
 	}
-	s:STATE_WEST_SLOVAKIA = {
+	s:STATE_SLOVAKIA = {
 		region_state:HUN = {
 			create_pop = {
 				culture = hungarian
 				size = 237000
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 45000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
@@ -1740,7 +1740,7 @@
 			create_pop = {
 				culture = hungarian
 				religion = protestant
-				size = 212396
+				size = 282396
 			}
 			create_pop = {
 				culture = ashkenazi
@@ -1753,20 +1753,20 @@
 			}
 		}
 	}
-	s:STATE_EAST_SLOVAKIA = {
+	s:STATE_RUTHENIA = {
 		region_state:HUN = {
 			create_pop = {
 				culture = hungarian
 				size = 150848
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 15000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
 			create_pop = {
 				culture = slovak
-				size = 606000
+				size = 66000
 			}
 			create_pop = {
 				culture = polish
@@ -1809,7 +1809,7 @@
 				size = 15001
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 95000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
@@ -1845,7 +1845,7 @@
 				size = 48280
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 85000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
@@ -1871,7 +1871,7 @@
 				size = 303592
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 35000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}
@@ -1897,7 +1897,7 @@
 				size = 202048
 			}
 			create_pop = {
-				culture = saxon
+				culture = east_german
 				size = 25000
 				# removed in 1.9.2 working_adult_ratio = 0.35
 			}

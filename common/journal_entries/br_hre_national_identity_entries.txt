@@ -5,6 +5,10 @@ je_national_identity = {
 	
 	group = je_group_internal_affairs
 
+	is_shown_in_lobby = {
+		c:HRE ?= this
+	}
+
 	# is_shown_when_inactive = {
 	# 	root = c:HRE
 	# }
@@ -54,10 +58,10 @@ je_identity_embrace_our_roman_identity = {
 
 	complete = {
 		NOT = {
-			has_law = law_type:law_national_supremacy
-			has_law = law_type:law_ethnostate
-			has_law = law_type:law_state_religion
-			has_law = law_type:law_state_atheism
+			has_law_or_variant = law_type:law_national_supremacy
+			has_law_or_variant = law_type:law_ethnostate
+			has_law_or_variant = law_type:law_state_religion
+			has_law_or_variant = law_type:law_state_atheism
 		}
 		country_has_primary_culture = cu:frankish
 	}
@@ -95,10 +99,10 @@ je_identity_embrace_french = {
 
 	complete = {
 		OR = {
-			has_law = law_type:law_national_supremacy
-			has_law = law_type:law_ethnostate
+			has_law_or_variant = law_type:law_national_supremacy
+			has_law_or_variant = law_type:law_ethnostate
 		}
-		has_law = law_type:law_state_religion
+		has_law_or_variant = law_type:law_state_religion
 		NOT = {
 			country_has_primary_culture = cu:frankish
 		}

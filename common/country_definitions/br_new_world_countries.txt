@@ -72,7 +72,7 @@ br_louisiane = {
 	color = { 53 72 144 }
 	country_type = colonial
 	tier = grand_principality
-	cultures = { colonial_french }
+	cultures = { cajun }
 	capital = STATE_LOUISIANA
 }
 
@@ -107,7 +107,7 @@ br_atlantica = {
 	color = { 54 127 156 } 
 	country_type = colonial
 	tier = principality
-	cultures = { colonial_italian }
+	cultures = { amerigan }
 	capital = STATE_CUBA
 }
 
@@ -115,7 +115,7 @@ br_giamaica = {
 	color = { 214 111 90 }
 	country_type = colonial
 	tier = principality
-	cultures = { colonial_italian }
+	cultures = { amerigan }
 	capital = STATE_JAMAICA
 }
 

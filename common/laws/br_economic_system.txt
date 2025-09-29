@@ -21,6 +21,7 @@ law_traditionalism = {
 
 	modifier = {
 		state_shopkeepers_investment_pool_efficiency_mult = -0.5
+		state_bureaucrats_investment_pool_efficiency_mult = -0.5
 		state_capitalists_investment_pool_efficiency_mult = -0.5
 		state_farmers_investment_pool_efficiency_mult = -0.5
 		state_clergymen_investment_pool_efficiency_mult = -0.5
@@ -96,8 +97,9 @@ law_interventionism = {
 					has_modifier = shogun_ig_forced_to_open_market
 					has_journal_entry = je_meiji_main
 					has_journal_entry = je_great_reforms_serfdom
+					has_journal_entry = je_hawaii
 				}
-				has_law = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_traditionalism
 			}
 			add = 10000 # Top priority for Tanzimat/Meiji AI is to get out of Traditionalism
 		}
@@ -105,7 +107,7 @@ law_interventionism = {
 		# AI should really try to get out of Traditionalism under the right circumstances
 		if = {
 			limit = {
-				has_law = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_traditionalism
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
@@ -151,7 +153,6 @@ law_agrarianism = {
 		country_government_dividends_reinvestment_add = 0.5
 		country_government_dividends_efficiency_add = 0.3
 		country_free_charters_add = 1
-
 		country_disable_nationalization_without_compensation_bool = yes
 		
 		country_aristocrats_pol_str_mult = 0.2
@@ -160,7 +161,7 @@ law_agrarianism = {
 
 	ai_will_do = {
 		OR = {
-			has_law = law_type:law_traditionalism
+			has_law_or_variant = law_type:law_traditionalism
 			literacy_rate < 0.4
 		}
 	}
@@ -176,7 +177,7 @@ law_agrarianism = {
 		if = {
 			limit = {
 				has_journal_entry = je_sick_man_bureaucracy
-				has_law = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_traditionalism
 			}
 			add = 10000 # Top priority for Tanzimat AI is to get out of Traditionalism
 		}
@@ -191,7 +192,7 @@ law_agrarianism = {
 		# AI should really try to get out of Traditionalism under the right circumstances
 		if = {
 			limit = {
-				has_law = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_traditionalism
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
@@ -298,7 +299,7 @@ law_industry_banned = {
 
 	ai_will_do = {
 		OR = {
-			has_law = law_type:law_traditionalism
+			has_law_or_variant = law_type:law_traditionalism
 			literacy_rate < 0.4
 		}
 	}
@@ -324,15 +325,7 @@ law_extraction_economy = {
 	}
 
 	can_enact = {
-		trigger_if = {
-			limit = {
-				game_date > 1736.1.1
-			}
-			is_subject = yes # Subject relationships load after laws' validities are checked
-		}
-		trigger_else = {
-			always = yes
-		}
+		is_subject = yes
 	}
 
 	on_activate = {
@@ -426,6 +419,7 @@ law_laissez_faire = {
 		law_serfdom
 		law_isolationism
 		law_anarchy
+		law_guild_system
 	}
 
 	unlocking_technologies = {
@@ -461,8 +455,9 @@ law_laissez_faire = {
 					has_modifier = shogun_ig_forced_to_open_market
 					has_journal_entry = je_meiji_main
 					has_journal_entry = je_great_reforms_serfdom
+					has_journal_entry = je_hawaii
 				}
-				has_law = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_traditionalism
 			}
 			add = 10000 # Top priority for Tanzimat/Meiji AI is to get out of Traditionalism
 		}
@@ -470,7 +465,7 @@ law_laissez_faire = {
 		# AI should really try to get out of Traditionalism under the right circumstances
 		if = {
 			limit = {
-				has_law = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_traditionalism
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }

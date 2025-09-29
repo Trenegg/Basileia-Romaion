@@ -135,7 +135,7 @@ poland.4 = {
         if = { 
             limit = {
                 ROOT = {
-                    has_law = law_type:law_serfdom
+                    has_law_or_variant = law_type:law_serfdom
                 }
             }
             add_modifier = {
@@ -207,7 +207,7 @@ poland.5 = {
                 change_tag = RUT
                 if = {
 					limit = {
-						NOT = { has_law = law_type:law_tenant_farmers }
+						NOT = { has_law_or_variant = law_type:law_tenant_farmers }
 					}
 					activate_law = law_type:law_tenant_farmers
 				}
@@ -263,6 +263,81 @@ poland.6 = {
         }
         else = {
             remove_modifier = br_modifier_eastern_oppression
+        }
+    }
+}
+
+#New pagan religion pop up
+poland.7 = {
+    type = country_event
+    placement = root
+    title = poland.7.t
+    desc = poland.7.d
+    # flavor = poland.7.f
+    dlc = dlc_basileia_romaion
+
+    event_image = {
+		video = "gfx/event_pictures/europenorthamerica_russian_serfs.bk2"
+	}
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+
+    icon = "gfx/interface/icons/religion_icons/slavic.dds"
+    
+    duration = 3
+
+    trigger = {
+        c:PLC ?= this
+        has_technology_researched = nationalism
+    }
+
+    #suppress the new religions
+    option = {
+        name = poland.7.a
+        default_option = yes
+        #Pops convert to the new religion
+        every_scope_state = {
+			convert_population = {
+				target = rel:br_religion_slavic
+				value = 0.05
+			}
+		}
+    }
+    #tolerate the new religions
+    option = {
+        name = poland.7.b
+        trigger = {
+            or = {
+                has_law_or_variant = law_type:law_freedom_of_conscience
+                has_law_or_variant = law_type:law_total_separation
+            }
+        }
+        #Pops convert to the new religion
+        every_scope_state = {
+			convert_population = {
+				target = rel:br_religion_slavic
+				value = 0.10
+			}
+		}
+    }
+    #convert to the new religions
+    option = {
+        name = poland.7.c
+        trigger = {
+            or = {
+                has_law_or_variant = law_type:law_freedom_of_conscience
+                has_law_or_variant = law_type:law_total_separation
+            }
+        }
+        br_religion_swap_when_taken_effect = { TARGET_RELIGION = rel:br_religion_slavic }
+        show_as_tooltip = {
+            every_scope_state = {
+                convert_population = {
+                    target = rel:br_religion_slavic
+                    value = 0.10
+                }
+		    }
         }
     }
 }

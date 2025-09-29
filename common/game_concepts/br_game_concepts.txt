@@ -2,3 +2,27 @@
 #concept_exarchate = {
 #	texture = "gfx/interface/icons/lens_toolbar_icons/puppet.dds"
 #}
+
+concept_br_imperial_residence = {
+	texture = "gfx/interface/icons/building_icons/br_building_palais_de_la_cite.dds"
+}
+
+concept_br_1de_estate = {
+	texture = "gfx/interface/icons/generic_icons/population.dds"
+}
+
+concept_br_2de_estate = {
+	texture = "gfx/interface/icons/generic_icons/population.dds"
+}
+
+concept_br_3de_estate = {
+	texture = "gfx/interface/icons/generic_icons/population.dds"
+}
+
+concept_br_monarchy_popularity = {
+	texture = "gfx/interface/icons/event_icons/sovereign_empire.dds"
+}
+
+concept_br_enlightenment_value = {
+	texture = "gfx/interface/icons/ig_icons/intelligensia.dds"
+}

@@ -42,8 +42,8 @@
  ig_zoroastrian_priests: "Zoroastrian Priests"
  ig_zoroastrian_priests_desc: "#lore The Zoroastrian Priests, or Mobeds, are the keepers of the ancient faith of Ahura Mazda. Through fire temples, rituals, and sacred teachings, they strive to maintain purity and righteousness amidst a world increasingly given over to chaos.#!"
 
- ig_boyars: "Boyars"
- ig_boyars_desc: "#lore The Boyars are the old landed nobility of the Rus' and Eastern Europe. Possessing vast estates and hereditary privileges, they command not only wealth but immense influence over state affairs, often acting as kingmakers—or king-breakers.#!"
+ #ig_boyars: "Boyars" #moved to replace/misc_l_english
+ #ig_boyars_desc: "#lore The Boyars are the old landed nobility of the Rus' and Eastern Europe. Possessing vast estates and hereditary privileges, they command not only wealth but immense influence over state affairs, often acting as kingmakers—or king-breakers.#!"
 
  ig_szlachta: "Szlachta"
  ig_szlachta_desc: "#lore The Szlachta are the noble class of the Polish-Lithuanian Commonwealth. Bound by traditions of liberty, they wield extraordinary legislative and political power through the Sejm and the Liberum Veto, fiercely guarding their ancient rights against royal centralization.#!"
@@ -277,7 +277,6 @@
  state_trait_Hyrcanian_forests: "Hyrcanian Forests"
  state_trait_Ispahan_mines: "Ispahan Mines"
  #state_trait_mesopotamian_floodplain: "Mesopotamian Floodplain"
- state_trait_anatolian_plateau: "Anatolian Plateau"
  state_trait_cold_water_port: "Cold Water Port"
  state_trait_spice_islands: "Spice Islands"
  state_trait_canada_forest: "Forests of the Great North"
@@ -288,7 +287,7 @@
  state_trait_ethiopian_highlands: "Ethiopian Highlands"
 
  decree_romanisation: "Romanization"
- decree_romanisation_desc: "Begin efforts to \"Romanize\" this province."
+ decree_romanisation_desc: "Encourage the adoption of Roman speech, custom, and law to unify this province with the Empire."
 
  #Goods
  goods_output_tea_mult: "Building @tea!$tea$ output"
@@ -441,7 +440,7 @@
  setting_bulgaria_game_rule_small: "Default: Bulgaria Pronia"
  setting_bulgaria_game_rule_small_desc: "Bulgaria nothing more than a Pronia of Basileia Romaion"
  setting_bulgaria_game_rule_large: "Second Bulgarian Empire"
- setting_bulgaria_game_rule_large_desc: "Bulgaria has broken off from Basileia Romaion and created a large empire centered on the danube.(There was no second Bulgarian Empire in the 12th century in this timeline.)"
+ setting_bulgaria_game_rule_large_desc: "Bulgaria has broken off from Basileia Romaion and created a large empire centered on the danube.(There was no second Bulgarian Empire in the 12th century in this timeline.)\n@warning! #r Is broken right now, this will cause a game crash#!"
 
 
  #Comabt units
@@ -453,12 +452,18 @@
  combat_unit_type_screw_frigate: "Screw Frigate"
  combat_unit_type_carrack: "Carrack"
 
- # Laws
+ #Laws
  law_tribal_armies: "Tribal Society"
  law_tribal_armies_desc: "A militaristic tribal society is organized around kinship, loyalty, and the pursuit of martial glory. Warfare is not merely a necessity but a way of life, with military prowess shaping social status, economy, and governance alike."
  law_mixed_army: "Mixed Military"
  law_mixed_army_desc: "A standing core of professional soldiers forms the heart of the army, bolstered in times of need by vast levies drawn from the feudal estates. This model blends discipline with sheer numbers, balancing quality and quantity."
 
+ br_law_roman_supremacy: "Roman Hegemonía"
+ br_law_roman_supremacy_desc: "The Basileía Rōmaíōn is the heart of civilization, heir to the Caesars and guardians of the true Roman legacy. Its culture, faith, and tongue shape the order of the oikoumenē, while foreign realms exist only in relation to the throne of the Basileus, as subjects, imitators, or adversaries awaiting Rome’s embrace."
+ br_law_themata: "Themata System"
+ br_law_themata_desc: "The empire is divided into themata, great military-administrative provinces governed by strategoi. Each commands the local stratiōtai while overseeing civil affairs, ensuring swift mobilization, regional defense, and the stability of imperial rule."
+ br_law_tagmata_army: "Imperial Tagmata"
+ br_law_tagmata_army_desc: "The tagmata are the empire’s professional standing troops, elite formations sworn directly to the Basileus. Serving as the core of imperial power, they provide rapid response and sustained strength in distant campaigns, reinforced by the might of the themata for depth and resilience."
 
  #Power Blocs
  Romaion_Bloc: "Basileía tōn Romaíon" #Koinopolitia

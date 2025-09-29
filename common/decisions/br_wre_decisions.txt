@@ -1,0 +1,53 @@
+﻿
+br_proclaim_ambition_to_restore_wre_decision = {
+	is_shown = {
+		not = {
+			or = {
+				c:HRE ?= this
+				c:BYZ ?= this
+				religion = rel:orthodox
+				has_variable = br_ambition_to_restore_wre_var
+			}
+		}
+		any_primary_culture = {
+			has_discrimination_trait_group = heritage_group_european
+		}
+	}
+
+	possible = {
+	}
+
+	when_taken = {
+		set_variable = br_ambition_to_restore_wre_var
+		add_primary_culture = cu:latinoi
+		change_infamy = 50
+		custom_tooltip = br_can_now_form_wre_tt
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}
+
+br_wre_swap_flag_decision = {
+	is_shown = {
+		c:br_WRE ?= this
+	}
+
+	possible = {
+	}
+
+	when_taken = {
+		custom_tooltip = {
+			text = br_wre_swap_to_alternate_flag_tt
+
+			if = {
+				limit = { has_variable = br_wre_alternate_flag_var }
+				remove_variable = br_wre_alternate_flag_var
+			}
+			else = {
+				set_variable = br_wre_alternate_flag_var
+			}
+		}
+	}
+}

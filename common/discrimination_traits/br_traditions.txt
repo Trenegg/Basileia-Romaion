@@ -1,0 +1,23 @@
+﻿mediterranean_heritage = {
+	type = tradition
+}
+
+african_settler = {
+	type = tradition
+}
+
+colonial_heritage = {
+	type = tradition
+}
+
+greco_roman_heritage = {
+	type = tradition
+}
+
+elysian_heritage = {
+	type = tradition
+}
+
+commonwealth_tradition = {
+	type = tradition
+}
