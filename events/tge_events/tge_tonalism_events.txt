@@ -288,7 +288,7 @@ tge_tonalism.021 = { # Gold Offered as a Sacrifice
 	flavor = tge_tonalism.021.f
 
 	event_image = {
-		video = "media_alias"
+		video = "tge_mesoamerica_ruler_speaking"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -396,7 +396,7 @@ tge_tonalism.022 = { # Gold Offered as a Sacrifice
 	flavor = tge_tonalism.022.f
 
 	event_image = {
-		video = "media_alias"
+		video = "tge_mesoamerica_ruler_speaking"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -504,7 +504,7 @@ tge_tonalism.023 = { # Gold Offered as a Sacrifice
 	flavor = tge_tonalism.023.f
 
 	event_image = {
-		video = "media_alias"
+		video = "tge_mesoamerica_ruler_speaking"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
