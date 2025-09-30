@@ -6,23 +6,14 @@
 
 ########################################
 
-# Cultures are grouped by the following regions:
-# 1. Mesoamerica/Intermediate Region
-# 2. Arioamerica/Oasisamerica
-# 3. Woodlands
-# 4. South America
-
-# Custom tags use the XXX_YYY format where X is the culture supergroup of the tag and Y is the specific country tag. This is to futureproof for future V3 and BR development
-# Several vanilla tags are duplicated here
-
-########################################
-
 #### WOODLAND CULTURES ####
-
 algonquian= {
-	color= hsv{ 0.22 0.15 0.86 }
+	color = hsv{ 0.22 0.15 0.86 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_eastern_woodlands_indian
+	language = language_algonquian
+	traditions = { }
+
 	male_common_first_names = {
 		Catecahassa Cottawamago Cheeseekau
 		Gakiiwegwanebi 
@@ -60,9 +51,12 @@ algonquian= {
 }
 
 caddoan= { # Choctaw
-	color= hsv{ 0.16 0.65 0.85 }
+	color = hsv{ 0.16 0.65 0.85 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_eastern_woodlands_indian
+	language = language_caddoan
+	traditions = {}
+
 	male_common_first_names = {
 		Apuckshunubbee
 		Benjamin
@@ -101,9 +95,12 @@ caddoan= { # Choctaw
 }
 
 cahokian = {
-	color = { 255 127 0 }
+	color = rgb{ 255 127 0 }
 	religion = br_religion_totemism
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_eastern_woodlands_indian
+	language = language_algonquian
+	traditions = { }
+
 	male_common_first_names = {
 		Catecahassa Cottawamago Cheeseekau
 		Gakiiwegwanebi 
@@ -141,9 +138,13 @@ cahokian = {
 }
 
 cherokee= {
-	color= rgb{ 105 145 40 }
+	color = rgb{ 105 145 40 }
+
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_eastern_woodlands_indian
+	language = language_algonquian
+	traditions = { }
+
 	male_common_first_names = {
 		Andrew
 		Charles
@@ -206,9 +207,12 @@ cherokee= {
 }
 
 cree= {
-	color= hsv{ 0.30 0.39 0.95 }
+	color = hsv{ 0.30 0.39 0.95 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_eastern_woodlands_indian
+	language = language_cree
+	traditions = {}
+
 	male_common_first_names = {
 		Alexis
 		Baptiste
@@ -256,9 +260,12 @@ cree= {
 }
 
 iroquoian= {
-	color= rgb{ 233 116 10 }
+	color = rgb{ 233 116 10 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_eastern_woodlands_indian
+	language = language_iroquoian
+	traditions = {}
+
 	male_common_first_names = {
 		Akwiraron Akwirente
 		Domagaya
@@ -300,9 +307,12 @@ iroquoian= {
 }
 
 muskogean= { # Creek and Seminole
-	color= hsv{ 0.27 0.2 0.67 }
+	color = hsv{ 0.27 0.2 0.67 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_eastern_woodlands_indian
+	language = language_creek
+	traditions = {}
+
 	male_common_first_names = {
 		Alexander
 		Billy
@@ -352,11 +362,14 @@ muskogean= { # Creek and Seminole
 }
 
 #### ARIDO/OASIS AMERICA CULTURES ####
-
 apache = {
-	color= hsv{ 0.11 0.58 0.94 }
+	color = hsv{ 0.11 0.58 0.94 }
 	religion = br_religion_totemism #BR
-	traits = { na_dene_heritage apache }
+	heritage = heritage_plains_indian
+	language = language_apachean
+	traditions = {}
+
+
 	male_common_first_names = {
 		Klaesh
 		Lomayumtewa
@@ -393,9 +406,12 @@ apache = {
 }
 
 comanche = {
-	color= hsv{ 0.08 0.5 0.37 }
+	color = hsv{ 0.08 0.5 0.37 }
 	religion = br_religion_totemism #BR
-	traits = { mesoamerican_heritage comanche }
+	heritage = heritage_plains_indian
+	language = language_numic
+	traditions = {}
+
 	male_common_first_names = {
 		Esihabit
 		Huupi-pahati Hitetetsi
@@ -440,9 +456,13 @@ comanche = {
 }
 
 navajo= {
-	color= hsv{ 0.62 0.26 0.74 }
-	traits = { na_dene_heritage navajo }
+	color = hsv{ 0.62 0.26 0.74 }
 	religion = br_religion_totemism #BR
+	heritage = heritage_southwest_indian
+	language = language_apachean
+	traditions = {}
+
+
 	male_common_first_names = {
 		Barboncito
 		Digul_Chee
@@ -489,9 +509,12 @@ navajo= {
 }
 
 oodham= {
-	color= hsv{ 0.94 0.63 0.58 }
+	color = hsv{ 0.94 0.63 0.58 }
 	religion = br_religion_totemism #BR
-	traits = { mesoamerican_heritage oodham }
+	heritage = heritage_southwest_indian
+	language = language_oodham
+	traditions = {}
+
 	male_common_first_names = {
 		Charles
 		David
@@ -538,9 +561,12 @@ oodham= {
 }
 
 pueblo= {
-	color= hsv{ 0.19 0.34 0.93 }
+	color = hsv{ 0.19 0.34 0.93 }
 	religion = br_tge_religion_tonalism
-	traits = { north_american_heritage tanoan }
+	heritage = heritage_southwest_indian
+	language = language_hopi
+	traditions = {}
+
 	male_common_first_names = {
 		Alchesay
 		Amisoli
@@ -597,9 +623,12 @@ pueblo= {
 #### MESOAMERICAN CULTURES ####
 
 cahitan = {
-	color = { 77 67 68 }
+	color = rgb{ 77 67 68 }
 	religion = br_tge_religion_tonalism
-	traits = { mesoamerican_heritage cahitan }
+	heritage = heritage_southwest_indian
+	language = language_cahitan
+	traditions = {}
+
 	male_common_first_names = {
 		Eiya
 		Jeeka
@@ -642,10 +671,12 @@ cahitan = {
 }
 
 cariban= { # Hispanicized. Also includes some Garifuna and Warao names.
-	color= { 52 120 25 }
+	color = rbg{ 52 120 25 }
 	religion = animist
-	traits = { indigenous_american_heritage south_american_group }
-	
+	heritage = heritage_caribbean
+	language = language_hispanophone
+	traditions = {}
+
 	male_common_first_names = {
 		Antonio Aurelio
 		Brigido
@@ -691,9 +722,12 @@ cariban= { # Hispanicized. Also includes some Garifuna and Warao names.
 }
 
 mayan = {
-	color= hsv{ 0.69 0.08 0.55 }
+	color = hsv{ 0.69 0.08 0.55 }
 	religion = br_tge_religion_mayan
-	traits = { mesoamerican_heritage mayan }
+	heritage = heritage_mesoamerican
+	language = language_mayan
+	traditions = {}
+
 	male_common_first_names = {
 		Acal
 		Ahau
@@ -777,9 +811,12 @@ mayan = {
 }
 
 miskito = { # Names stolen from Maya due to lack of sources
-	color= { 240 240 100 }
+	color = rgb{ 240 240 100 }
 	religion = animist
-	traits = { mesoamerican_heritage misumalpan }
+	heritage = heritage_caribbean
+	language = language_miskito
+	traditions = {}
+
 	male_common_first_names = {
 		Acal
 		Ahau
@@ -863,9 +900,12 @@ miskito = { # Names stolen from Maya due to lack of sources
 }
 
 mixtec = {
-	color= { 150 80 70 }
+	color = rgb{ 150 80 70 }
 	religion = br_tge_religion_tonalism
-	traits = { mesoamerican_heritage otomanguean }
+	heritage = heritage_mesoamerican
+	language = language_mixtecan
+	traditions = {}
+
 	male_common_first_names = {
 		Amoxtli
 		Athziri
@@ -955,9 +995,12 @@ mixtec = {
 }
 
 nahua= {
-	color= hsv{ 0.47 0.29 0.38 }
+	color = hsv{ 0.47 0.29 0.38 }
 	religion = br_tge_religion_tonalism
-	traits = { mesoamerican_heritage nahua }
+	heritage = heritage_mesoamerican
+	language = language_nahuan
+	traditions = {}
+
 	male_common_first_names = {
 		Amoxtli
 		Athziri
@@ -1039,10 +1082,13 @@ nahua= {
 }
 
 otomi = {
-	color = { 169 58 12 }
+	color = rgb{ 169 58 12 }
 	religion = br_tge_religion_tonalism
-	traits = { mesoamerican_heritage otomi }
-	
+	heritage = heritage_mesoamerican
+	language = language_otomi
+	traditions = {}
+
+
 	male_common_first_names={
 		Dazu
 		Mexe
@@ -1080,10 +1126,13 @@ otomi = {
 }
 
 purepecha = {
-	color = { 100 124 50 }
+	color = rgb{ 100 124 50 }
 	religion = br_tge_religion_tonalism
-	traits = { mesoamerican_heritage purepecha }
-	
+	heritage = heritage_mesoamerican
+	language = language_tarascan
+	traditions = {}
+
+
 	male_common_first_names={
 		Aramen
 		Hiripan
@@ -1125,10 +1174,12 @@ purepecha = {
 }
 
 taino = { # 
-	color={ 52 120 25 }
+	color = rgb{ 52 120 25 }
 	religion = animist
-	traits = { indigenous_american_heritage arawak }
-	
+	heritage = heritage_caribbean
+	language = language_cariban
+	traditions = {}
+
 	male_common_first_names={
 		Ameyro
 		Baguanao
@@ -1184,21 +1235,86 @@ taino = { #
 }
 
 tarahumara = {
-	color= { 52 120 25 }
+	color = rgb{ 52 120 25 }
 	religion = br_tge_religion_tonalism
-	traits = { mesoamerican_heritage tarahumara }
-	
-	male_common_first_names={
-		
+	heritage = heritage_southwest_indian
+	language = language_tarahumaran
+	traditions = {}
+
+	# Names stolen from Nahua
+	male_common_first_names = {
+		Amoxtli
+		Athziri
+		Chimalli
+		Cipactli
+		Coyotl
+		Cuetlachtli
+		Ehecatl
+		Etalpalli
+		Eztli
+		Huemac
+		Huitzilin
+		Ilhicamina
+		Ihuicatl
+		Itzcoatl
+		Necalli
+		Nezahualcoyotl
+		Nezahualpilli
+		Nopaltzin
+		Tenoch
+		Tlazopilli
+		Tonalli
+		Xipil
+		Yaotl
+		Yayauhqui
 	}
 	female_common_first_names = {
-		
-	}	
-	noble_last_names = {
-		
+		Ameyalli
+		Citlali
+		Izel
+		Malinalxochitl
+		Metztli
+		Nenetl
+		Nochtli
+		Quetzalli
+		Tlacotl
+		Tonalli
+		Xitlaly
+		Xipil
+		Xochitl
+		Yolotl
+		Zeltzin
 	}
-	common_last_names={
-		
+	noble_last_names = {
+		Achcauhtli
+		Cuauhtemoc
+		Huitzilopochtli
+		Mictlantecuhtli
+		Moyotlan
+		Tezcatlipoca
+		Quetzalcoatl
+		Xochiquetzal
+	}
+	common_last_names = {
+		Ahuactzin
+		Coaguila
+		Coyotl
+		Cuautlaxahue
+		Huanitzin
+		Ixtlilxochitl
+		Matlacuahuac
+		Mayahuel
+		Moxo
+		Nahui
+		Ocelotl
+		Panecatl
+		Tlaxca
+		Tletla
+		Tzehe
+		Xaxalpa
+		Xochitl
+		Zapotitla
+		Zicotencatl
 	}
 	ethnicities = {
 		1 = native_american
@@ -1207,9 +1323,13 @@ tarahumara = {
 }
 
 wastek = {
-	color= hsv{ 0.69 0.08 0.55 }
+	color = hsv{ 0.69 0.08 0.55 }
+
 	religion = br_tge_religion_mayan
-	traits = { mesoamerican_heritage mayan }
+	heritage = heritage_mesoamerican
+	language = language_mayan
+	traditions = {}
+
 	male_common_first_names = {
 		Acal
 		Ahau
@@ -1293,9 +1413,12 @@ wastek = {
 }
 
 west_mayan = {
-	color= hsv{ 0.69 0.08 0.55 }
+	color = hsv{ 0.69 0.08 0.55 }
 	religion = br_tge_religion_mayan
-	traits = { mesoamerican_heritage mayan }
+	heritage = heritage_mesoamerican
+	language = language_mayan
+	traditions = {}
+
 	male_common_first_names = {
 		Acal
 		Ahau
@@ -1379,9 +1502,12 @@ west_mayan = {
 }
 
 zapotec = {
-	color= hsv{ 0.32 0.29 0.78 }
+	color = hsv{ 0.32 0.29 0.78 }
 	religion = br_tge_religion_tonalism
-	traits = { mesoamerican_heritage otomanguean }
+	heritage = heritage_mesoamerican
+	language = language_zapotecan
+	traditions = {}
+
 	male_common_first_names = {
 		Agustin
 		Alberto
@@ -1465,11 +1591,13 @@ zapotec = {
 }
 
 #### SOUTH AMERICAN CULTURES ####
-
 aimara= {
-	color= hsv{ 0.02 0.57 0.74 }
+	color = hsv{ 0.02 0.57 0.74 }
 	religion = br_religion_inti #BR
-	traits = { indigenous_american_heritage south_american_group }
+	heritage = heritage_andean
+	language = language_aymaran
+	traditions = { }
+
 	male_common_first_names = {
 		Agustin
 		Alejandro
@@ -1565,9 +1693,12 @@ aimara= {
 }
 
 amazonian= {
-	color= hsv{ 0.38 0.58 0.59 }
+	color = hsv{ 0.38 0.58 0.59 }
 	religion = animist
-	traits = { indigenous_american_heritage south_american_group }
+	heritage = heritage_amazonian
+	language = language_amazonian
+	traditions = { }
+
 	male_common_first_names = {
 		Anibal
 		Augusto
@@ -1658,9 +1789,12 @@ amazonian= {
 }
 
 guajiro= {
-	color= { 221 248 75 }
+	color = rgb{ 221 248 75 }
 	religion = animist #BR
-	traits = { indigenous_american_heritage south_american_group }
+	heritage = heritage_caribbean
+	language = language_guajiro
+	traditions = { }
+
 	male_common_first_names = {
 		Baltasar
 		Bernardo
@@ -1727,9 +1861,12 @@ guajiro= {
 }
 
 guarani= {
-	color= rgb{ 194 109 46 }
+	color = rgb{ 194 109 46 }
 	religion = animist
-	traits = { indigenous_american_heritage south_american_group }
+	heritage = heritage_guarani
+	language = language_guarani
+	traditions = {  }
+
 	male_common_first_names = {
 		Aniceto
 		Antonio
@@ -1823,9 +1960,12 @@ guarani= {
 }
 
 muisca= {
-	color= { 125 12 52 }
+	color = rgb{ 125 12 52 }
 	religion = animist
-	traits = { indigenous_american_heritage south_american_group }
+	heritage = heritage_andean
+	language = language_muiscan
+	traditions = {  }
+
 	male_common_first_names = {
 		Alonso
 		Brizuela
@@ -1873,9 +2013,12 @@ muisca= {
 }
 
 patagonian= {
-	color=hsv{ 0.23 0.24 0.9 }
+	color =hsv{ 0.23 0.24 0.9 }
 	religion = animist
-	traits = { indigenous_american_heritage south_american_group }
+	heritage = heritage_patagonian
+	language = language_chonan
+	traditions = {  }
+
 	male_common_first_names = {
 		Agustin
 		Antonio
@@ -1966,9 +2109,12 @@ patagonian= {
 }
 
 tupinamba= {
-	color= hsv{ 0.44 0.24 0.71 }
+	color = hsv{ 0.44 0.24 0.71 }
 	religion = animist
-	traits = { indigenous_american_heritage south_american_group }
+	heritage = heritage_atlantic
+	language = language_tupi
+	traditions = {  }
+
 	male_common_first_names = {
 		Andre
 		Carlos
@@ -2035,9 +2181,12 @@ tupinamba= {
 }
 
 quechua= {
-	color= hsv{ 0.10 0.22 0.69 }
+	color = hsv{ 0.10 0.22 0.69 }
 	religion = br_religion_inti #BR
-	traits = { indigenous_american_heritage south_american_group }
+	heritage = heritage_andean
+	language = language_quechuan
+	traditions = { }
+
 	male_common_first_names = {
 		Agustin
 		Alejandro
@@ -2127,11 +2276,13 @@ quechua= {
 }
 
 #### UNCATEGORIZED CULTURES ####
-
 athabaskan= {
-	color= rgb{ 96 108 64 }
+	color = rgb{ 96 108 64 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_circumpolar
+	language = language_athabaskan
+	traditions = { }
+
 	male_common_first_names = {
 		Caubvick
 		David
@@ -2192,9 +2343,12 @@ athabaskan= {
 }
 
 dakota= {
-	color= hsv{ 0.63 0.30 0.52 }
+	color = hsv{ 0.63 0.30 0.52 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_plains_indian
+	language = language_siouan
+	traditions = { }
+
 	male_common_first_names = {
 		Hehaka
 		Inkpaduta
@@ -2244,9 +2398,12 @@ dakota= {
 }
 
 hokan= {
-	color= hsv{ 0.94 0.27 0.87 }
+	color = hsv{ 0.94 0.27 0.87 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_californian_indian
+	language = language_hokan
+	traditions = { }
+
 	male_common_first_names = {
 		Aurelio
 		Camilo
@@ -2305,9 +2462,12 @@ hokan= {
 }
 
 inuit= {
-	color= hsv{ 0.49 0.03 0.99 }
+	color = hsv{ 0.49 0.03 0.99 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_circumpolar
+	language = language_eskimoan
+	traditions = { }
+
 	male_common_first_names = {
 		Caubvick
 		David
@@ -2368,9 +2528,12 @@ inuit= {
 }
 
 metis = {
-	color= rgb{ 200 111 62 }
+	color = rgb{ 200 111 62 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_subarctic_indian
+	language = language_metis
+	traditions = { }
+
 	male_common_first_names = {
 		Amroise-Dydime
 		Daniel
@@ -2415,9 +2578,12 @@ metis = {
 }
 
 nez_perce= { # Nez Perce
-	color= hsv{ 0.06 0.45 0.70 }
+	color = hsv{ 0.06 0.45 0.70 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_plateau_indian
+	language = language_sahaptian
+	traditions = {	}
+
 	male_common_first_names = {
 		Allalimya_Takanin
 		Apash_Wyakaikt
@@ -2454,9 +2620,12 @@ nez_perce= { # Nez Perce
 }
 
 paiute= { # Ute and Shoshone
-	color= hsv{ 0.06 0.39 0.80 }
+	color = hsv{ 0.06 0.39 0.80 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_great_basin_indian
+	language = language_numic
+	traditions = { }
+
 	male_common_first_names = {
 		Antonga
 		Arapeen
@@ -2513,9 +2682,12 @@ paiute= { # Ute and Shoshone
 }
 
 salish= { # Tlingit and Haida merged together, forgive me
-	color= hsv{ 0.55 0.47 0.54 }
+	color = hsv{ 0.55 0.47 0.54 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_northwest_coast_indian
+	language = language_salish
+	traditions = { }
+
 	male_common_first_names = {
 		Cumshewa
 		Cuneah
@@ -2560,9 +2732,12 @@ salish= { # Tlingit and Haida merged together, forgive me
 }
 
 siouan= {
-	color= hsv{ 0.14 0.35 0.99 }
+	color = hsv{ 0.14 0.35 0.99 }
 	religion = br_religion_totemism #BR
-	traits = { indigenous_american_heritage north_american_group }
+	heritage = heritage_plains_indian
+	language = language_siouan
+	traditions = { }
+
 	male_common_first_names = {
 		Hehaka
 		Inkpaduta
