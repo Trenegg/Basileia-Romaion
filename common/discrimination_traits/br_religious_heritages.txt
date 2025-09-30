@@ -10,10 +10,6 @@ heritage_pantheon = {
 	type = heritage
 	trait_group = heritage_group_naturalistic
 }
-heritage_new_world_pagan = {
-	type = heritage
-	trait_group = heritage_group_naturalistic
-}
 heritage_old_world_pagan = {
 	type = heritage
 	trait_group = heritage_group_naturalistic

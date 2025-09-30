@@ -1,0 +1,26 @@
+﻿heritage_totemist = {
+	type = heritage
+	trait_group = heritage_group_indigenous_american
+}
+
+heritage_tonalist = {
+	type = heritage
+	trait_group = heritage_group_indigenous_american
+}
+
+heritage_andean = {
+	type = heritage
+	trait_group = heritage_group_indigenous_american
+}
+
+heritage_animist = {
+	type = heritage
+	trait_group = heritage_group_indigenous_american
+}
+
+##########
+# This is a placeholder inherited from pre-TGE BR; this should not be used
+heritage_new_world_pagan = {
+	type = heritage
+	trait_group = heritage_group_naturalistic
+}
