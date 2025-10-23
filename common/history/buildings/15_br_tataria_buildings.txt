@@ -549,7 +549,12 @@
 		region_state:br_blacksea_colonies={
 			create_building={
 				building="building_barracks"
-				level=3
+				add_ownership={
+					country={
+						country="c:br_blacksea_colonies"
+						levels=3
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_general_training" }
 			}
@@ -661,7 +666,7 @@
 				add_ownership={
 					country={
 						country="c:br_tartaria"
-						levels=1
+						levels=3
 					}
 				}
 				reserves=1
@@ -861,7 +866,7 @@
 				add_ownership={
 					country={
 						country="c:br_tartaria"
-						levels=3
+						levels=5
 					}
 				}
 				reserves=1
@@ -915,7 +920,7 @@
 				add_ownership={
 					country={
 						country="c:br_tartaria"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
@@ -982,7 +987,7 @@
 				add_ownership={
 					country={
 						country="c:br_tartaria"
-						levels=15
+						levels=16
 					}
 				}
 				reserves=1
@@ -1137,7 +1142,7 @@
 				add_ownership={
 					country={
 						country="c:br_tartaria"
-						levels=8
+						levels=14
 					}
 				}
 				reserves=1
@@ -1508,7 +1513,7 @@
 				add_ownership={
 					country={
 						country="c:br_tartaria"
-						levels=1
+						levels=3
 					}
 				}
 				reserves=1
@@ -1576,7 +1581,12 @@
 		region_state:br_blacksea_colonies={
 			create_building={
 				building="building_barracks"
-				level=3
+				add_ownership={
+					country={
+						country="c:br_blacksea_colonies"
+						levels=3
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_general_training" }
 			}
@@ -1760,7 +1770,12 @@
 		region_state:VEN={
 			create_building={
 				building="building_barracks"
-				level=3
+				add_ownership={
+					country={
+						country="c:VEN"
+						levels=3
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_general_training" }
 			}
@@ -1786,7 +1801,7 @@
 				add_ownership={
 					country={
 						country="c:br_tartaria"
-						levels=1
+						levels=3
 					}
 				}
 				reserves=1
@@ -1840,7 +1855,12 @@
 		region_state:br_blacksea_colonies={
 			create_building={
 				building="building_barracks"
-				level=3
+				add_ownership={
+					country={
+						country="c:br_blacksea_colonies"
+						levels=3
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_general_training" }
 			}

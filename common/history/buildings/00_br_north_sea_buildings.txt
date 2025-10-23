@@ -514,7 +514,7 @@
 				add_ownership={
 					country={
 						country="c:DEN"
-						levels=2
+						levels=3
 					}
 				}
 				reserves=1
@@ -1345,7 +1345,12 @@
 		region_state:br_new_world_company={
 			create_building={
 				building="building_barracks"
-				level=1
+				add_ownership={
+					country={
+						country="c:br_new_world_company"
+						levels=1
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
@@ -2988,7 +2993,7 @@
 				add_ownership={
 					country={
 						country="c:DEN"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
@@ -3378,7 +3383,7 @@
 				add_ownership={
 					country={
 						country="c:SCO"
-						levels=2
+						levels=3
 					}
 				}
 				reserves=1

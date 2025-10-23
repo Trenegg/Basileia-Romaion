@@ -414,7 +414,10 @@ law_elder_council = {
 	}
 
 	is_visible = {
-		is_country_type = decentralized
+		OR = {
+			is_country_type = decentralized
+			is_country_type = unrecognized
+		}	
 	}
 
 	on_activate = {
